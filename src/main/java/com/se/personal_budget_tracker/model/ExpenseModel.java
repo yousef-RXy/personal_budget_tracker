@@ -33,7 +33,7 @@ public class ExpenseModel {
   private LocalDate date;
 
   @Column(name = "isRepetitive", nullable = false)
-  private boolean isRepetitive;
+  private boolean isRepetitive = false;
 
   @ManyToOne
   @JoinColumn(name = "user_id")
