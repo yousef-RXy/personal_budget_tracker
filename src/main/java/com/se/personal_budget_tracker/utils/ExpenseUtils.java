@@ -20,9 +20,9 @@ public class ExpenseUtils {
     expense.setName(expenseRequestDTO.getName());
     expense.setAmount(expenseRequestDTO.getAmount());
     expense.setCategory(expenseRequestDTO.getCategory());
-    expense.setDate(LocalDate.now());
+    expense.setDate(expenseRequestDTO.getDate() == null ? LocalDate.now() : expenseRequestDTO.getDate());
     expense.setRepetitive(expenseRequestDTO.isRepetitive());
-
+    expense.setRepitionPeriod(expenseRequestDTO.getRepitionPeriod());
     return expense;
   }
 

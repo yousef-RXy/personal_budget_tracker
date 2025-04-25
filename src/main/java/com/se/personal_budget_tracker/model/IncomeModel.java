@@ -12,7 +12,6 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
-
 @Entity
 @Table(name = "incomes")
 public class IncomeModel {
@@ -34,7 +33,8 @@ public class IncomeModel {
 
   @Column(name = "isRepetitive", nullable = false)
   private boolean isRepetitive;
-
+  @Column(name = "repitionPeriod",nullable =false)
+  private RepitionPeriod repitionPeriod= RepitionPeriod.None;
   @ManyToOne
   @JoinColumn(name = "user_id")
   @JsonBackReference
@@ -79,7 +79,12 @@ public class IncomeModel {
   public void setDate(LocalDate date) {
     this.date = date;
   }
-
+  public void setRepitionPeriod(RepitionPeriod repitionPeriod){
+    this.repitionPeriod = repitionPeriod;
+  }
+  public RepitionPeriod  getRepitionPeriod(){
+    return this.repitionPeriod ;
+  }
   public boolean isRepetitive() {
     return isRepetitive;
   }
