@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 import com.se.personal_budget_tracker.Repository.ExpenseRepository;
 import com.se.personal_budget_tracker.Repository.UserRepository;
-import com.se.personal_budget_tracker.dto.ExpenseRequestDTO;
+import com.se.personal_budget_tracker.dto.EntryDTO;
 import com.se.personal_budget_tracker.model.ExpenseModel;
 import com.se.personal_budget_tracker.model.UserModel;
 import com.se.personal_budget_tracker.utils.BalanceUtils;
@@ -31,7 +31,7 @@ public class ExpenseService {
         return expenseRepository.findByUserIdAndCategory(userId, category);
     }
 
-    public boolean addExpense(ExpenseRequestDTO expenseDTO) {
+    public boolean addExpense(EntryDTO expenseDTO) {
         try {
             ExpenseModel expense = new ExpenseModel();
 
@@ -74,7 +74,7 @@ public class ExpenseService {
         }
     }
 
-    public boolean updateExpense(Long expenseID, ExpenseRequestDTO expenseDTO) {
+    public boolean updateExpense(Long expenseID, EntryDTO expenseDTO) {
         try {
             ExpenseModel expense = ExpenseUtils.getExpenseByID(expenseRepository, expenseID);
 

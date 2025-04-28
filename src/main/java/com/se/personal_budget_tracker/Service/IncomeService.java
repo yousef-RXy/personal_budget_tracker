@@ -1,7 +1,7 @@
 package com.se.personal_budget_tracker.Service;
 import com.se.personal_budget_tracker.Repository.IncomeRepository;
 import com.se.personal_budget_tracker.Repository.UserRepository;
-import com.se.personal_budget_tracker.dto.IncomeDTO;
+import com.se.personal_budget_tracker.dto.EntryDTO;
 import com.se.personal_budget_tracker.model.IncomeModel;
 import com.se.personal_budget_tracker.model.UserModel;
 import com.se.personal_budget_tracker.utils.BalanceUtils;
@@ -18,7 +18,7 @@ private final IncomeRepository incomeRepository;
         this.incomeRepository = incomeRepository;
         this.userRepository = userRepository;
     }
-public boolean addIncome(IncomeDTO incomeDTO) {
+public boolean addIncome(EntryDTO incomeDTO) {
     try {
         long userID = incomeDTO.getUserId();
         UserModel user = UserUtils.getUserByID(userRepository,userID);
@@ -49,7 +49,7 @@ public boolean DeleteIncome(Long incomeID, Long userID){
         return false;
     }
 }
-public boolean UpdateIncome(IncomeDTO incomeDTO, Long IncomeID){
+public boolean UpdateIncome(EntryDTO incomeDTO, Long IncomeID){
     try{
         IncomeModel income = IncomeUtils.getIncomeModelByID(incomeRepository, IncomeID);
         Long user = income.getUser().getId();
@@ -57,11 +57,15 @@ public boolean UpdateIncome(IncomeDTO incomeDTO, Long IncomeID){
         if(!isOwner){
             return  false;
         }
-        boolean isEnoughBalance =BalanceUtils.decreaseBalance(userRepository, user, income.getAmount());
-        if (!isEnoughBalance) {
-            return false;
+        if(incomeDTO.getAmount() >= income.getAmount()){
+            BalanceUtils.increaseBalance(userRepository, user, incomeDTO.getAmount() - income.getAmount() );
         }
-        BalanceUtils.increaseBalance(userRepository, user, incomeDTO.getAmount());
+        else{
+            boolean isEnoughBalance = BalanceUtils.decreaseBalance(userRepository, user, income.getAmount() - incomeDTO.getAmount());
+            if (!isEnoughBalance) {
+                return false;
+            }
+        }
         IncomeUtils.DTOtoModel(incomeDTO, income);
         incomeRepository.save(income);
         return true;

@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 import com.se.personal_budget_tracker.Repository.ExpenseRepository;
-import com.se.personal_budget_tracker.dto.ExpenseRequestDTO;
+import com.se.personal_budget_tracker.dto.EntryDTO;
 import com.se.personal_budget_tracker.model.ExpenseModel;
 import com.se.personal_budget_tracker.model.UserModel;
 
@@ -16,7 +16,7 @@ public class ExpenseUtils {
     return expense;
   }
 
-  public static ExpenseModel DTOtoModel(ExpenseRequestDTO expenseRequestDTO, ExpenseModel expense) {
+  public static ExpenseModel DTOtoModel(EntryDTO expenseRequestDTO, ExpenseModel expense) {
     expense.setName(expenseRequestDTO.getName());
     expense.setAmount(expenseRequestDTO.getAmount());
     expense.setCategory(expenseRequestDTO.getCategory());
