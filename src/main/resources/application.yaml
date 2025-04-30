@@ -1,9 +1,9 @@
 spring:
   application: name:personal_budget_tracker
   datasource:
-    url: jdbc:mysql://localhost:3306/budget_tracker
-    username: root
-    password:
+    url: jdbc:mysql://localhost:3306/personal_budget_tracker
+    username: admin
+    password: 12345678
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     database-platform: org.hibernate.dialect.MySQL8Dialect
