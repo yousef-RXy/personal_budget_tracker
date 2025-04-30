@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 import com.se.personal_budget_tracker.model.RepitionPeriod;
 
-public class ExpenseRequestDTO {
+public class EntryDTO {
   private String name;
   private long amount;
   private String category;
@@ -46,7 +46,7 @@ public class ExpenseRequestDTO {
   public void setRepetitive(boolean isRepetitive) {
     this.isRepetitive = isRepetitive;
   }
-   public void setRepitionPeriod(RepitionPeriod repitionPeriod){
+  public void setRepitionPeriod(RepitionPeriod repitionPeriod){
       this.repitionPeriod = repitionPeriod;
     }
     public RepitionPeriod  getRepitionPeriod(){

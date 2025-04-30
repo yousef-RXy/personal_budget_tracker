@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.se.personal_budget_tracker.Service.IncomeService;
-import com.se.personal_budget_tracker.dto.IncomeDTO;
+import com.se.personal_budget_tracker.dto.EntryDTO;
 import com.se.personal_budget_tracker.model.IncomeModel;
 
 @RestController
@@ -22,10 +22,10 @@ private final IncomeService incomeService;
 public IncomeController(IncomeService incomeService) {
     this.incomeService = incomeService;     }
 @PostMapping
-public boolean addIncome(@RequestBody IncomeDTO incomeDTO) {
+public boolean addIncome(@RequestBody EntryDTO incomeDTO) {
     return incomeService.addIncome(incomeDTO);}
 @PutMapping("/{incomeID}")
-public boolean updateIncome(@PathVariable Long incomeID, @RequestBody IncomeDTO updatedIncome) {
+public boolean updateIncome(@PathVariable Long incomeID, @RequestBody EntryDTO updatedIncome) {
     return incomeService.UpdateIncome(updatedIncome, incomeID);
 }
 @DeleteMapping("/{incomeID}")

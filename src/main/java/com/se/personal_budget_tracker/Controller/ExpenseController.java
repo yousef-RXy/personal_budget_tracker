@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.se.personal_budget_tracker.Service.ExpenseService;
-import com.se.personal_budget_tracker.dto.ExpenseRequestDTO;
+import com.se.personal_budget_tracker.dto.EntryDTO;
 import com.se.personal_budget_tracker.model.ExpenseModel;
 
 @RestController
@@ -35,7 +35,7 @@ public class ExpenseController {
   }
 
   @PostMapping
-  public boolean addExpense(@RequestBody ExpenseRequestDTO expense) {
+  public boolean addExpense(@RequestBody EntryDTO expense) {
     return expenseService.addExpense(expense);
   }
 
@@ -45,7 +45,7 @@ public class ExpenseController {
   }
 
   @PutMapping("/{expenseID}")
-  public boolean updateExpense(@PathVariable Long expenseID, @RequestBody ExpenseRequestDTO updatedExpense) {
+  public boolean updateExpense(@PathVariable Long expenseID, @RequestBody EntryDTO updatedExpense) {
     return expenseService.updateExpense(expenseID, updatedExpense);
   }
 
