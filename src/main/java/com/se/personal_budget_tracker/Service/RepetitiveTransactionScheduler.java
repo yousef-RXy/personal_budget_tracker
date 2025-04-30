@@ -21,7 +21,7 @@ public class RepetitiveTransactionScheduler {
     private ExpenseRepository expenseRepository;
     @Autowired
     private UserRepository userRepository;
-    @Scheduled(cron = "0 */3 * * * *") // 10 min / every 12 am -> (0 0 0 * * *)
+    @Scheduled(cron = "0 0 0 * * *") //  every 12 am / 10 min  -> (0 */10 * * * *)
     public void addRepetitiveIncomes() {
         List<IncomeModel> repetitiveIncomes = incomeRepository.findByIsRepetitiveTrue();
         for (IncomeModel income : repetitiveIncomes) {
@@ -30,7 +30,7 @@ public class RepetitiveTransactionScheduler {
             boolean createRepitive=false;
             switch (income.getRepitionPeriod()) {
                 case Daily:
-                createRepitive=lastDate.plusDays(1).isEqual(today);
+                    createRepitive=lastDate.plusDays(1).isEqual(today);
                     break;
                 case Yearly:
                     createRepitive=lastDate.plusYears(1).isEqual(today);
@@ -58,7 +58,7 @@ public class RepetitiveTransactionScheduler {
             }
         }
     }
-    @Scheduled(cron = "0 */2 * * * *") // 10 min for testing/ every 12 am -> (0 0 0 * * *)
+    @Scheduled(cron = "0 0 0 * * *") // 10 min for testing/ every 12 am -> (0 0 0 * * *)
     public void addRepetitiveExpenses() {
         List<ExpenseModel> repetitiveExpenses= expenseRepository.findByIsRepetitiveTrue();
         for (ExpenseModel expense : repetitiveExpenses) {
@@ -67,7 +67,7 @@ public class RepetitiveTransactionScheduler {
             boolean createRepitive=false;
             switch (expense.getRepitionPeriod()) {
                 case Daily:
-                createRepitive=lastDate.plusDays(1).isEqual(today);
+                    createRepitive=lastDate.plusDays(1).isEqual(today);
                     break;
                 case Yearly:
                     createRepitive=lastDate.plusYears(1).isEqual(today);
