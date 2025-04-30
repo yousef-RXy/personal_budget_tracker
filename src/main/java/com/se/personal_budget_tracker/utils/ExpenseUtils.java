@@ -6,6 +6,7 @@ import java.util.Objects;
 import com.se.personal_budget_tracker.Repository.ExpenseRepository;
 import com.se.personal_budget_tracker.dto.EntryDTO;
 import com.se.personal_budget_tracker.model.ExpenseModel;
+import com.se.personal_budget_tracker.model.RepetitionPeriod;
 import com.se.personal_budget_tracker.model.UserModel;
 
 public class ExpenseUtils {
@@ -16,13 +17,17 @@ public class ExpenseUtils {
     return expense;
   }
 
-  public static ExpenseModel DTOtoModel(EntryDTO expenseRequestDTO, ExpenseModel expense) {
-    expense.setName(expenseRequestDTO.getName());
-    expense.setAmount(expenseRequestDTO.getAmount());
-    expense.setCategory(expenseRequestDTO.getCategory());
-    expense.setDate(expenseRequestDTO.getDate() == null ? LocalDate.now() : expenseRequestDTO.getDate());
-    expense.setRepetitive(expenseRequestDTO.isRepetitive());
-    expense.setRepitionPeriod(expenseRequestDTO.getRepitionPeriod());
+  public static ExpenseModel DTOtoModel(EntryDTO entryDTO, ExpenseModel expense) {
+    expense.setName(entryDTO.getName());
+    expense.setAmount(entryDTO.getAmount());
+    expense.setCategory(entryDTO.getCategory());
+    expense.setRepetitive(entryDTO.getRepetitionPeriod() != null);
+
+    expense.setDate(entryDTO.getDate() == null ? LocalDate.now() : entryDTO.getDate());
+    expense.setRepetitionPeriod(
+        entryDTO.getRepetitionPeriod() == null ? RepetitionPeriod.None
+            : entryDTO.getRepetitionPeriod());
+
     return expense;
   }
 

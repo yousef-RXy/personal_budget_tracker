@@ -2,7 +2,7 @@ package com.se.personal_budget_tracker.dto;
 
 import java.time.LocalDate;
 
-import com.se.personal_budget_tracker.model.RepitionPeriod;
+import com.se.personal_budget_tracker.model.RepetitionPeriod;
 
 public class EntryDTO {
   private String name;
@@ -10,11 +10,13 @@ public class EntryDTO {
   private String category;
   private boolean isRepetitive;
   private Long userId;
-  LocalDate date;
+  private RepetitionPeriod repetitionPeriod;
+  private LocalDate date;
+
   public void setDate(LocalDate date) {
     this.date = date;
   }
-  private RepitionPeriod repitionPeriod;
+
   public String getName() {
     return name;
   }
@@ -46,18 +48,23 @@ public class EntryDTO {
   public void setRepetitive(boolean isRepetitive) {
     this.isRepetitive = isRepetitive;
   }
-  public void setRepitionPeriod(RepitionPeriod repitionPeriod){
-      this.repitionPeriod = repitionPeriod;
-    }
-    public RepitionPeriod  getRepitionPeriod(){
-      return this.repitionPeriod ;
-    }
+
+  public void setRepetitionPeriod(RepetitionPeriod repetitionPeriod) {
+    this.repetitionPeriod = repetitionPeriod;
+  }
+
+  public RepetitionPeriod getRepetitionPeriod() {
+    return this.repetitionPeriod;
+  }
+
   public Long getUserId() {
     return userId;
   }
-      public LocalDate getDate() {
-      return date;
+
+  public LocalDate getDate() {
+    return date;
   }
+
   public void setUserId(Long userId) {
     this.userId = userId;
   }

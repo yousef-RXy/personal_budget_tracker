@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Component;
 
 import com.se.personal_budget_tracker.Repository.ExpenseRepository;
 import com.se.personal_budget_tracker.Repository.IncomeRepository;
@@ -12,7 +13,7 @@ import com.se.personal_budget_tracker.Repository.UserRepository;
 import com.se.personal_budget_tracker.model.ExpenseModel;
 import com.se.personal_budget_tracker.model.IncomeModel;
 import com.se.personal_budget_tracker.utils.BalanceUtils;
-import org.springframework.stereotype.Component;
+
 @Component
 public class RepetitiveTransactionScheduler {
     @Autowired
@@ -21,30 +22,31 @@ public class RepetitiveTransactionScheduler {
     private ExpenseRepository expenseRepository;
     @Autowired
     private UserRepository userRepository;
-    @Scheduled(cron = "0 0 0 * * *") //  every 12 am / 10 min  -> (0 */10 * * * *)
+
+    @Scheduled(cron = "0 0 0 * * *") // every 12 am / 10 min -> (0 */10 * * * *)
     public void addRepetitiveIncomes() {
         List<IncomeModel> repetitiveIncomes = incomeRepository.findByIsRepetitiveTrue();
         for (IncomeModel income : repetitiveIncomes) {
             LocalDate lastDate = income.getDate();
             LocalDate today = LocalDate.now();
-            boolean createRepitive=false;
-            switch (income.getRepitionPeriod()) {
+            boolean createRepitive = false;
+            switch (income.getRepetitionPeriod()) {
                 case Daily:
-                    createRepitive=lastDate.plusDays(1).isEqual(today);
+                    createRepitive = lastDate.plusDays(1).isEqual(today);
                     break;
                 case Yearly:
-                    createRepitive=lastDate.plusYears(1).isEqual(today);
+                    createRepitive = lastDate.plusYears(1).isEqual(today);
                     break;
                 case Weekly:
-                    createRepitive=lastDate.plusWeeks(1).isEqual(today);
+                    createRepitive = lastDate.plusWeeks(1).isEqual(today);
                     break;
                 case Monthly:
-                    createRepitive=lastDate.plusMonths(1).isEqual(today);
+                    createRepitive = lastDate.plusMonths(1).isEqual(today);
                     break;
                 default:
                     break;
             }
-            if(createRepitive){
+            if (createRepitive) {
                 IncomeModel newIncome = new IncomeModel();
                 newIncome.setName(income.getName());
                 newIncome.setUser(income.getUser());
@@ -52,37 +54,39 @@ public class RepetitiveTransactionScheduler {
                 newIncome.setAmount(income.getAmount());
                 newIncome.setDate(today);
                 newIncome.setRepetitive(true);
-                newIncome.setRepitionPeriod(income.getRepitionPeriod());
+                newIncome.setRepetitionPeriod(income.getRepetitionPeriod());
                 incomeRepository.save(newIncome);
-                BalanceUtils.increaseBalance(userRepository,income.getUser().getId(), income.getAmount());
+                BalanceUtils.increaseBalance(userRepository, income.getUser().getId(), income.getAmount());
             }
         }
     }
+
     @Scheduled(cron = "0 0 0 * * *") // 10 min for testing/ every 12 am -> (0 0 0 * * *)
     public void addRepetitiveExpenses() {
-        List<ExpenseModel> repetitiveExpenses= expenseRepository.findByIsRepetitiveTrue();
+        List<ExpenseModel> repetitiveExpenses = expenseRepository.findByIsRepetitiveTrue();
         for (ExpenseModel expense : repetitiveExpenses) {
             LocalDate lastDate = expense.getDate();
             LocalDate today = LocalDate.now();
-            boolean createRepitive=false;
-            switch (expense.getRepitionPeriod()) {
+            boolean createRepitive = false;
+            switch (expense.getRepetitionPeriod()) {
                 case Daily:
-                    createRepitive=lastDate.plusDays(1).isEqual(today);
+                    createRepitive = lastDate.plusDays(1).isEqual(today);
                     break;
                 case Yearly:
-                    createRepitive=lastDate.plusYears(1).isEqual(today);
+                    createRepitive = lastDate.plusYears(1).isEqual(today);
                     break;
                 case Weekly:
-                    createRepitive=lastDate.plusWeeks(1).isEqual(today);
+                    createRepitive = lastDate.plusWeeks(1).isEqual(today);
                     break;
                 case Monthly:
-                    createRepitive=lastDate.plusMonths(1).isEqual(today);
+                    createRepitive = lastDate.plusMonths(1).isEqual(today);
                     break;
                 default:
                     break;
             }
-            if(createRepitive){
-                boolean isEnoughBalance = BalanceUtils.decreaseBalance(userRepository,expense.getUser().getId(), expense.getAmount());
+            if (createRepitive) {
+                boolean isEnoughBalance = BalanceUtils.decreaseBalance(userRepository, expense.getUser().getId(),
+                        expense.getAmount());
                 if (!isEnoughBalance) {
                     continue;
                 }
@@ -93,7 +97,7 @@ public class RepetitiveTransactionScheduler {
                 newExpense.setCategory(expense.getCategory());
                 newExpense.setDate(LocalDate.now());
                 newExpense.setRepetitive(expense.isRepetitive());
-                newExpense.setRepitionPeriod(expense.getRepitionPeriod());
+                newExpense.setRepetitionPeriod(expense.getRepetitionPeriod());
                 expenseRepository.save(newExpense);
             }
         }

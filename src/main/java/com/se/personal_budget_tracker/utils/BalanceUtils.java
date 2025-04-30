@@ -21,7 +21,6 @@ public class BalanceUtils {
 
   public static boolean decreaseBalance(UserRepository userRepository, long userID, long amount) {
     try {
-
       UserModel user = UserUtils.getUserByID(userRepository, userID);
       long balance = user.getBalance();
 

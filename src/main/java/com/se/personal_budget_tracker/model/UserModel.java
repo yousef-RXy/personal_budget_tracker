@@ -1,11 +1,14 @@
 package com.se.personal_budget_tracker.model;
 
 import java.util.List;
+import java.util.ArrayList;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
+import jakarta.persistence.Transient;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -20,32 +23,44 @@ public class UserModel {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
-  @Column(name = "name", nullable = false)
-  private String name;
+  @Column(name = "username", nullable = false, unique = true)
+  private String username;
 
-  @Column(name = "email", nullable = false)
+  @Column(name = "email", nullable = false, unique = true)
   private String email;
 
-  @Column(name = "password", nullable = false)
+  @Transient
   private String password;
+
+  @JsonIgnore
+  @Column(name = "password_hash", nullable = false)
+  private String passwordHash;
 
   @Column(name = "balance", nullable = false)
   private long balance = 0;
 
   @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
   @JsonManagedReference
-  private List<IncomeModel> incomes;
+  private List<IncomeModel> incomes = new ArrayList<>();
 
   @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
   @JsonManagedReference
-  private List<ExpenseModel> expenses;
+  private List<ExpenseModel> expenses = new ArrayList<>();
 
-  public String getName() {
-    return name;
+  public Long getId() {
+    return id;
   }
 
-  public void setName(String name) {
-    this.name = name;
+  public void setId(Long id) {
+    this.id = id;
+  }
+
+  public String getUsername() {
+    return username;
+  }
+
+  public void setUsername(String username) {
+    this.username = username;
   }
 
   public String getEmail() {
@@ -64,6 +79,14 @@ public class UserModel {
     this.password = password;
   }
 
+  public String getPasswordHash() {
+    return passwordHash;
+  }
+
+  public void setPasswordHash(String passwordHash) {
+    this.passwordHash = passwordHash;
+  }
+
   public long getBalance() {
     return balance;
   }
@@ -72,16 +95,19 @@ public class UserModel {
     this.balance = balance;
   }
 
-  public Long getId() {
-    return id;
-  }
-
   public List<IncomeModel> getIncomes() {
     return incomes;
+  }
+
+  public void setIncomes(List<IncomeModel> incomes) {
+    this.incomes = incomes;
   }
 
   public List<ExpenseModel> getExpenses() {
     return expenses;
   }
 
+  public void setExpenses(List<ExpenseModel> expenses) {
+    this.expenses = expenses;
+  }
 }

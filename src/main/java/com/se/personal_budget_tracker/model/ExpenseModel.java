@@ -30,12 +30,14 @@ public class ExpenseModel {
   private String category;
 
   @Column(name = "date", nullable = false)
-  private LocalDate date;
+  private LocalDate date = LocalDate.now();
 
   @Column(name = "isRepetitive", nullable = false)
   private boolean isRepetitive = false;
-  @Column(name = "repitionPeriod",nullable =false)
-  private RepitionPeriod repitionPeriod= RepitionPeriod.None;
+
+  @Column(name = "repetitionPeriod", nullable = false)
+  private RepetitionPeriod repetitionPeriod = RepetitionPeriod.None;
+
   @ManyToOne
   @JoinColumn(name = "user_id")
   @JsonBackReference
@@ -88,12 +90,15 @@ public class ExpenseModel {
   public void setRepetitive(boolean isRepetitive) {
     this.isRepetitive = isRepetitive;
   }
-  public void setRepitionPeriod(RepitionPeriod repitionPeriod){
-    this.repitionPeriod = repitionPeriod;
+
+  public void setRepetitionPeriod(RepetitionPeriod repetitionPeriod) {
+    this.repetitionPeriod = repetitionPeriod;
   }
-  public RepitionPeriod  getRepitionPeriod(){
-    return this.repitionPeriod ;
+
+  public RepetitionPeriod getRepetitionPeriod() {
+    return this.repetitionPeriod;
   }
+
   public UserModel getUser() {
     return user;
   }
