@@ -1,87 +1,64 @@
 package com.se.personal_budget_tracker.model;
 
 import java.util.List;
+import java.util.ArrayList;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
+import jakarta.persistence.Transient;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 
 @Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 @Table(name = "users")
 public class UserModel {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
-  @Column(name = "name", nullable = false)
-  private String name;
+  @Column(name = "username", nullable = false, unique = true)
+  private String username;  
 
-  @Column(name = "email", nullable = false)
+  @Column(name = "email", nullable = false, unique = true)
   private String email;
 
-  @Column(name = "password", nullable = false)
-  private String password;
+  @Transient
+  private String password; 
+
+  @JsonIgnore
+  @Column(name = "password_hash",nullable = false)
+  private String passwordHash;
 
   @Column(name = "balance", nullable = false)
+  @Builder.Default
   private long balance = 0;
 
   @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
   @JsonManagedReference
-  private List<IncomeModel> incomes;
+  @Builder.Default
+  private List<IncomeModel> incomes = new ArrayList<>();
 
   @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
   @JsonManagedReference
-  private List<ExpenseModel> expenses;
-
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  public String getEmail() {
-    return email;
-  }
-
-  public void setEmail(String email) {
-    this.email = email;
-  }
-
-  public String getPassword() {
-    return password;
-  }
-
-  public void setPassword(String password) {
-    this.password = password;
-  }
-
-  public long getBalance() {
-    return balance;
-  }
-
-  public void setBalance(long balance) {
-    this.balance = balance;
-  }
-
-  public Long getId() {
-    return id;
-  }
-
-  public List<IncomeModel> getIncomes() {
-    return incomes;
-  }
-
-  public List<ExpenseModel> getExpenses() {
-    return expenses;
-  }
-
+  @Builder.Default
+  private List<ExpenseModel> expenses = new ArrayList<>();
 }
+
+
+
