@@ -6,6 +6,7 @@ import java.util.Objects;
 import com.se.personal_budget_tracker.Repository.ExpenseRepository;
 import com.se.personal_budget_tracker.dto.EntryDTO;
 import com.se.personal_budget_tracker.model.ExpenseModel;
+import com.se.personal_budget_tracker.model.RepetitionPeriod;
 import com.se.personal_budget_tracker.model.UserModel;
 
 public class ExpenseUtils {
@@ -21,8 +22,8 @@ public class ExpenseUtils {
     expense.setAmount(expenseRequestDTO.getAmount());
     expense.setCategory(expenseRequestDTO.getCategory());
     expense.setDate(expenseRequestDTO.getDate() == null ? LocalDate.now() : expenseRequestDTO.getDate());
-    expense.setRepetitive(expenseRequestDTO.isRepetitive());
-    expense.setRepitionPeriod(expenseRequestDTO.getRepitionPeriod());
+    expense.setRepetitionPeriod(expenseRequestDTO.getRepetitionPeriod() == null ? RepetitionPeriod.None : expenseRequestDTO.getRepetitionPeriod());
+
     return expense;
   }
 

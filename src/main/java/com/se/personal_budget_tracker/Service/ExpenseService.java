@@ -37,16 +37,13 @@ public class ExpenseService {
 
             long userID = expenseDTO.getUserId();
             UserModel user = UserUtils.getUserByID(userRepository, userID);
-
             boolean isEnoughBalance = BalanceUtils.decreaseBalance(userRepository, userID, expenseDTO.getAmount());
             if (!isEnoughBalance) {
                 return false;
             }
-
             expense.setUser(user);
             ExpenseUtils.DTOtoModel(expenseDTO, expense);
             expenseRepository.save(expense);
-
             return true;
         } catch (RuntimeException e) {
             return false;
@@ -61,9 +58,7 @@ public class ExpenseService {
             if (!isOwner) {
                 return false;
             }
-
             BalanceUtils.increaseBalance(userRepository, userID, expense.getAmount());
-
             if (!isOwner) {
                 return false;
             }

@@ -3,6 +3,7 @@ import com.se.personal_budget_tracker.Repository.IncomeRepository;
 import com.se.personal_budget_tracker.Repository.UserRepository;
 import com.se.personal_budget_tracker.dto.EntryDTO;
 import com.se.personal_budget_tracker.model.IncomeModel;
+import com.se.personal_budget_tracker.model.RepetitionPeriod;
 import com.se.personal_budget_tracker.model.UserModel;
 import com.se.personal_budget_tracker.utils.BalanceUtils;
 import com.se.personal_budget_tracker.utils.IncomeUtils;
@@ -23,11 +24,11 @@ public boolean addIncome(EntryDTO incomeDTO) {
         long userID = incomeDTO.getUserId();
         UserModel user = UserUtils.getUserByID(userRepository,userID);
         long amount = incomeDTO.getAmount();
-        BalanceUtils.increaseBalance(userRepository, userID, amount);
         IncomeModel income = new IncomeModel();
         income.setUser(user);
         IncomeUtils.DTOtoModel(incomeDTO, income);
         incomeRepository.save(income);
+        BalanceUtils.increaseBalance(userRepository, userID, amount);
         return true;
     } catch (RuntimeException e) {
         return false;

@@ -6,6 +6,8 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -31,10 +33,9 @@ public class IncomeModel {
   @Column(name = "date", nullable = false)
   private LocalDate date;
 
-  @Column(name = "isRepetitive", nullable = false)
-  private boolean isRepetitive;
-  @Column(name = "repitionPeriod",nullable =false)
-  private RepitionPeriod repitionPeriod= RepitionPeriod.None;
+  @Enumerated(EnumType.STRING)
+  @Column(name = "repetitionPeriod",nullable =false)
+  private RepetitionPeriod repetitionPeriod = RepetitionPeriod.None;
   @ManyToOne
   @JoinColumn(name = "user_id")
   @JsonBackReference
@@ -79,18 +80,11 @@ public class IncomeModel {
   public void setDate(LocalDate date) {
     this.date = date;
   }
-  public void setRepitionPeriod(RepitionPeriod repitionPeriod){
-    this.repitionPeriod = repitionPeriod;
+  public void setRepetitionPeriod(RepetitionPeriod repitionPeriod){
+    this.repetitionPeriod = repitionPeriod;
   }
-  public RepitionPeriod  getRepitionPeriod(){
-    return this.repitionPeriod ;
-  }
-  public boolean isRepetitive() {
-    return isRepetitive;
-  }
-
-  public void setRepetitive(boolean isRepetitive) {
-    this.isRepetitive = isRepetitive;
+  public RepetitionPeriod  getRepetitionPeriod(){
+    return this.repetitionPeriod ;
   }
 
   public UserModel getUser() {

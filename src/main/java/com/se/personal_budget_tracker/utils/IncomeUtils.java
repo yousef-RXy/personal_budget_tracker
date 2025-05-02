@@ -5,6 +5,7 @@ import java.time.LocalDate;
 import com.se.personal_budget_tracker.Repository.IncomeRepository;
 import com.se.personal_budget_tracker.dto.EntryDTO;
 import com.se.personal_budget_tracker.model.IncomeModel;
+import com.se.personal_budget_tracker.model.RepetitionPeriod;
 
 public class IncomeUtils {
 public static IncomeModel DTOtoModel(EntryDTO incomeDTO, IncomeModel income) {
@@ -12,8 +13,7 @@ public static IncomeModel DTOtoModel(EntryDTO incomeDTO, IncomeModel income) {
     income.setAmount(incomeDTO.getAmount());
     income.setCategory(incomeDTO.getCategory());
     income.setDate(incomeDTO.getDate() == null? LocalDate.now(): incomeDTO.getDate());
-    income.setRepetitive(incomeDTO.isRepetitive());
-    income.setRepitionPeriod(incomeDTO.getRepitionPeriod());
+    income.setRepetitionPeriod(incomeDTO.getRepetitionPeriod() == null ? RepetitionPeriod.None: incomeDTO.getRepetitionPeriod());
     return income;
 }
 public static IncomeModel getIncomeModelByID(IncomeRepository incomerepo, long incomeId ) throws RuntimeException {
