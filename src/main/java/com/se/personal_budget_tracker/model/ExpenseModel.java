@@ -6,6 +6,8 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -32,9 +34,7 @@ public class ExpenseModel {
   @Column(name = "date", nullable = false)
   private LocalDate date = LocalDate.now();
 
-  @Column(name = "isRepetitive", nullable = false)
-  private boolean isRepetitive = false;
-
+  @Enumerated(EnumType.STRING)
   @Column(name = "repetitionPeriod", nullable = false)
   private RepetitionPeriod repetitionPeriod = RepetitionPeriod.None;
 
@@ -81,14 +81,6 @@ public class ExpenseModel {
 
   public void setDate(LocalDate date) {
     this.date = date;
-  }
-
-  public boolean isRepetitive() {
-    return isRepetitive;
-  }
-
-  public void setRepetitive(boolean isRepetitive) {
-    this.isRepetitive = isRepetitive;
   }
 
   public void setRepetitionPeriod(RepetitionPeriod repetitionPeriod) {

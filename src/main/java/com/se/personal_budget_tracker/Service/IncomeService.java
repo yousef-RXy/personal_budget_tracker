@@ -53,7 +53,6 @@ public class IncomeService {
                 return false;
             }
 
-            BalanceUtils.decreaseBalance(userRepository, userID, amount);
             incomeRepository.delete(income);
             return true;
         } catch (RuntimeException e) {

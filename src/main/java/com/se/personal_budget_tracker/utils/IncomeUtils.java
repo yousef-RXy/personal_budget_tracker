@@ -12,7 +12,6 @@ public class IncomeUtils {
         income.setName(entryDTO.getName());
         income.setAmount(entryDTO.getAmount());
         income.setCategory(entryDTO.getCategory());
-        income.setRepetitive(entryDTO.getRepetitionPeriod() != null);
 
         income.setDate(entryDTO.getDate() == null ? LocalDate.now() : entryDTO.getDate());
         income.setRepetitionPeriod(

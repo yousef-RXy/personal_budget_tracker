@@ -8,7 +8,6 @@ public class EntryDTO {
   private String name;
   private long amount;
   private String category;
-  private boolean isRepetitive;
   private Long userId;
   private RepetitionPeriod repetitionPeriod;
   private LocalDate date;
@@ -39,14 +38,6 @@ public class EntryDTO {
 
   public void setCategory(String category) {
     this.category = category;
-  }
-
-  public boolean isRepetitive() {
-    return isRepetitive;
-  }
-
-  public void setRepetitive(boolean isRepetitive) {
-    this.isRepetitive = isRepetitive;
   }
 
   public void setRepetitionPeriod(RepetitionPeriod repetitionPeriod) {

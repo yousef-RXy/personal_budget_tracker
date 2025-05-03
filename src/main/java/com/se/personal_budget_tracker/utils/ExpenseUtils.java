@@ -21,7 +21,6 @@ public class ExpenseUtils {
     expense.setName(entryDTO.getName());
     expense.setAmount(entryDTO.getAmount());
     expense.setCategory(entryDTO.getCategory());
-    expense.setRepetitive(entryDTO.getRepetitionPeriod() != null);
 
     expense.setDate(entryDTO.getDate() == null ? LocalDate.now() : entryDTO.getDate());
     expense.setRepetitionPeriod(
