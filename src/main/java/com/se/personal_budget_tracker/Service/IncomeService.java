@@ -47,6 +47,12 @@ public class IncomeService {
                 return false;
             }
             long amount = income.getAmount();
+
+            boolean isEnoughBalance = BalanceUtils.decreaseBalance(userRepository, userID, amount);
+            if (!isEnoughBalance) {
+                return false;
+            }
+
             BalanceUtils.decreaseBalance(userRepository, userID, amount);
             incomeRepository.delete(income);
             return true;

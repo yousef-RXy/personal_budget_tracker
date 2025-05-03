@@ -2,15 +2,16 @@ spring:
   application:
     name: personal_budget_tracker
   datasource:
-    url: jdbc:postgresql://localhost:5432/budget_tracker
-    username: postgres
-    password: "621952"
+    url: jdbc:mysql://localhost:3306/personal_budget_tracker
+    username: admin
+    password: 12345678
+    driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
       ddl-auto: update
 
 # JWT Specific Configuration
 jwt:
-  secret: Jf94nA8snf94nA8snf94nA8snf94nA8s  
-  access-token-expiration: 3600000    
-  refresh-token-expiration: 2592000000 
+  secret: Jf94nA8snf94nA8snf94nA8snf94nA8s
+  access-token-expiration: 3600000
+  refresh-token-expiration: 2592000000

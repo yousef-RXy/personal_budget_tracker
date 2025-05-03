@@ -43,11 +43,8 @@ public class ExpenseService {
                 return false;
             }
 
-            System.out.println("Fetching expenses for userId: " + userID);
-
             expense.setUser(user);
             ExpenseUtils.DTOtoModel(expenseDTO, expense);
-            System.out.println("Fetching expenses for userId: " + expense);
             expenseRepository.save(expense);
 
             return true;
