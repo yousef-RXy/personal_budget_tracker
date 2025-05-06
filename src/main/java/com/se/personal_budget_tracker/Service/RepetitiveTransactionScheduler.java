@@ -30,24 +30,16 @@ public class RepetitiveTransactionScheduler {
         for (IncomeModel income : repetitiveIncomes) {
             LocalDate lastDate = income.getDate();
             LocalDate today = LocalDate.now();
-            boolean createRepitive = false;
+            boolean createRepetitive = false;
             switch (income.getRepetitionPeriod()) {
-                case Daily:
-                    createRepitive = lastDate.plusDays(1).isEqual(today);
-                    break;
-                case Yearly:
-                    createRepitive = lastDate.plusYears(1).isEqual(today);
-                    break;
-                case Weekly:
-                    createRepitive = lastDate.plusWeeks(1).isEqual(today);
-                    break;
-                case Monthly:
-                    createRepitive = lastDate.plusMonths(1).isEqual(today);
-                    break;
-                default:
-                    break;
+                case Daily -> createRepetitive = lastDate.plusDays(1).isEqual(today);
+                case Yearly -> createRepetitive = lastDate.plusYears(1).isEqual(today);
+                case Weekly -> createRepetitive = lastDate.plusWeeks(1).isEqual(today);
+                case Monthly -> createRepetitive = lastDate.plusMonths(1).isEqual(today);
+                default -> {
+                }
             }
-            if (createRepitive) {
+            if (createRepetitive) {
                 IncomeModel newIncome = new IncomeModel();
                 newIncome.setName(income.getName());
                 newIncome.setUser(income.getUser());
@@ -67,24 +59,16 @@ public class RepetitiveTransactionScheduler {
         for (ExpenseModel expense : repetitiveExpenses) {
             LocalDate lastDate = expense.getDate();
             LocalDate today = LocalDate.now();
-            boolean createRepitive = false;
+            boolean createRepetitive = false;
             switch (expense.getRepetitionPeriod()) {
-                case Daily:
-                    createRepitive = lastDate.plusDays(1).isEqual(today);
-                    break;
-                case Yearly:
-                    createRepitive = lastDate.plusYears(1).isEqual(today);
-                    break;
-                case Weekly:
-                    createRepitive = lastDate.plusWeeks(1).isEqual(today);
-                    break;
-                case Monthly:
-                    createRepitive = lastDate.plusMonths(1).isEqual(today);
-                    break;
-                default:
-                    break;
+                case Daily -> createRepetitive = lastDate.plusDays(1).isEqual(today);
+                case Yearly -> createRepetitive = lastDate.plusYears(1).isEqual(today);
+                case Weekly -> createRepetitive = lastDate.plusWeeks(1).isEqual(today);
+                case Monthly -> createRepetitive = lastDate.plusMonths(1).isEqual(today);
+                default -> {
+                }
             }
-            if (createRepitive) {
+            if (createRepetitive) {
                 boolean isEnoughBalance = BalanceUtils.decreaseBalance(userRepository, expense.getUser().getId(),
                         expense.getAmount());
                 if (!isEnoughBalance) {

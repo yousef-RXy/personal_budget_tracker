@@ -13,16 +13,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.se.personal_budget_tracker.Service.ExpenseService;
+import com.se.personal_budget_tracker.Service.ExpenseSummaryService;
+import com.se.personal_budget_tracker.dto.CategoryTotalDTO;
 import com.se.personal_budget_tracker.dto.EntryDTO;
+import com.se.personal_budget_tracker.dto.SummaryDTO;
 import com.se.personal_budget_tracker.model.ExpenseModel;
 
 @RestController
 @RequestMapping("/expenses")
 public class ExpenseController {
   private final ExpenseService expenseService;
+  private final ExpenseSummaryService summaryService;
 
-  public ExpenseController(ExpenseService expenseService) {
+  public ExpenseController(ExpenseService expenseService, ExpenseSummaryService summaryService) {
     this.expenseService = expenseService;
+    this.summaryService = summaryService;
   }
 
   @GetMapping
@@ -33,6 +38,16 @@ public class ExpenseController {
   @GetMapping("/{category}")
   public List<ExpenseModel> getCategoryExpenses(@PathVariable String category, @RequestHeader("User-Id") Long userId) {
     return expenseService.getCategoryExpenses(userId, category);
+  }
+
+  @GetMapping("/summary")
+  public SummaryDTO getSummary(@RequestHeader("User-Id") Long userId) {
+    return summaryService.getSummary(userId);
+  }
+
+  @GetMapping("/pie")
+  public List<CategoryTotalDTO> getPie(@RequestHeader("User-Id") Long userId) {
+    return summaryService.getPie(userId);
   }
 
   @PostMapping

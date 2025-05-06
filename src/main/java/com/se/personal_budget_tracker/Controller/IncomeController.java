@@ -12,42 +12,58 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.se.personal_budget_tracker.Service.ExpenseSummaryService;
 import com.se.personal_budget_tracker.Service.IncomeService;
+import com.se.personal_budget_tracker.Service.IncomeSummaryService;
+import com.se.personal_budget_tracker.dto.CategoryTotalDTO;
 import com.se.personal_budget_tracker.dto.EntryDTO;
+import com.se.personal_budget_tracker.dto.SummaryDTO;
 import com.se.personal_budget_tracker.model.IncomeModel;
 
 @RestController
 @RequestMapping("/incomes")
 public class IncomeController {
-    private final IncomeService incomeService;
+  private final IncomeService incomeService;
+  private final IncomeSummaryService summaryService;
 
-    public IncomeController(IncomeService incomeService) {
-        this.incomeService = incomeService;
-    }
+  public IncomeController(IncomeService incomeService, IncomeSummaryService summaryService) {
+    this.incomeService = incomeService;
+    this.summaryService = summaryService;
+  }
 
-    @GetMapping
-    public List<IncomeModel> getAllIncome(@RequestHeader("User-Id") Long userId) {
-        return incomeService.getAllIncome(userId);
-    }
+  @GetMapping
+  public List<IncomeModel> getAllIncome(@RequestHeader("User-Id") Long userId) {
+    return incomeService.getAllIncome(userId);
+  }
 
-    @GetMapping("/{category}")
-    public List<IncomeModel> getCategoryIncome(@PathVariable String category, @RequestHeader("User-Id") Long userId) {
-        return incomeService.getCategoryIncome(userId, category);
-    }
+  @GetMapping("/{category}")
+  public List<IncomeModel> getCategoryIncome(@PathVariable String category, @RequestHeader("User-Id") Long userId) {
+    return incomeService.getCategoryIncome(userId, category);
+  }
 
-    @PostMapping
-    public boolean addIncome(@RequestBody EntryDTO incomeDTO) {
-        return incomeService.addIncome(incomeDTO);
-    }
+  @GetMapping("/summary")
+  public SummaryDTO getSummary(@RequestHeader("User-Id") Long userId) {
+    return summaryService.getSummary(userId);
+  }
 
-    @PutMapping("/{incomeID}")
-    public boolean updateIncome(@PathVariable Long incomeID, @RequestBody EntryDTO updatedIncome) {
-        return incomeService.UpdateIncome(updatedIncome, incomeID);
-    }
+  @GetMapping("/pie")
+  public List<CategoryTotalDTO> getPie(@RequestHeader("User-Id") Long userId) {
+    return summaryService.getPie(userId);
+  }
 
-    @DeleteMapping("/{incomeID}")
-    public boolean deleteIncome(@PathVariable Long incomeID, @RequestHeader("User-Id") Long userId) {
-        return incomeService.DeleteIncome(incomeID, userId);
-    }
+  @PostMapping
+  public boolean addIncome(@RequestBody EntryDTO incomeDTO) {
+    return incomeService.addIncome(incomeDTO);
+  }
+
+  @PutMapping("/{incomeID}")
+  public boolean updateIncome(@PathVariable Long incomeID, @RequestBody EntryDTO updatedIncome) {
+    return incomeService.UpdateIncome(updatedIncome, incomeID);
+  }
+
+  @DeleteMapping("/{incomeID}")
+  public boolean deleteIncome(@PathVariable Long incomeID, @RequestHeader("User-Id") Long userId) {
+    return incomeService.DeleteIncome(incomeID, userId);
+  }
 
 }
