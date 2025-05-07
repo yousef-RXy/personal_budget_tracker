@@ -1,0 +1,566 @@
+{
+	"info": {
+		"_postman_id": "cb99fe24-df58-48e6-8706-0716517c7519",
+		"name": "Personal Budget Tracker - Expenses API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31385011"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"john_doe\",\r\n  \"password\": \"yourPassword123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/auth/login",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"john_doeee\",\r\n  \"email\": \"john@exampleee.com\",\r\n  \"password\": \"yourPassword123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/auth/register",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET expenses Summary",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "User-Id",
+						"value": "1",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/expense/summary",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"expense",
+						"summary"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET incomes Summary",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "User-Id",
+						"value": "1",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/income/summary",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"income",
+						"summary"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET expenses Pie",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "User-Id",
+						"value": "1",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/expense/pie",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"expense",
+						"pie"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET incomes Pie",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "User-Id",
+						"value": "1",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/income/pie",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"income",
+						"pie"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET All Expenses (by User)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{JWT}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "User-Id",
+						"value": "1",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/expense",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"expense"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET All Incomes (by User)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{JWT}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "User-Id",
+						"value": "1",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/income",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"income"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Expenses by Category",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{JWT}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "User-Id",
+						"value": "1",
+						"type": "text"
+					},
+					{
+						"key": "Category",
+						"value": "food",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/expense/category",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"expense",
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Incomes by Category",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{JWT}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "User-Id",
+						"value": "1",
+						"type": "text"
+					},
+					{
+						"key": "Category",
+						"value": "salary",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/income/category",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"income",
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Create Expense",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{JWT}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Grocery Shoppig\",\n  \"amount\": 1500,\n  \"category\": \"food\",\n  \"repetitionPeriod\": \"Weekly\",\n  \"userId\": 1\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/expense",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"expense"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Create Income",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{JWT}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Salary\",\n  \"amount\": 1500,\n  \"category\": \"salary\",\n  \"repetitionPeriod\": \"Weekly\",\n  \"userId\": 1\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/income",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"income"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Update Expense",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{JWT}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Updated Grocery Shopping\",\n  \"amount\": 1400,\n  \"category\": \"food\",\n  \"userId\": 1\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/expense/5",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"expense",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Update Income",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{JWT}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Updated Grocery Shopping\",\n  \"amount\": 1400,\n  \"category\": \"salary\",\n  \"userId\": 1\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/income/6",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"income",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Expense",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{JWT}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "User-Id",
+						"value": "1",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/expense/5",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"expense",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Income",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{JWT}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "User-Id",
+						"value": "1",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/income/6",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"income",
+						"6"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{JWT}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080",
+			"type": "string"
+		},
+		{
+			"key": "JWT",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
