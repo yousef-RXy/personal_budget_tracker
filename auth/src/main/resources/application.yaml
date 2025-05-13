@@ -13,7 +13,7 @@ spring:
 # JWT Specific Configuration
 jwt:
   secret: Jf94nA8snf94nA8snf94nA8snf94nA8s
-  access-token-expiration: 3600000
+  access-token-expiration: 2592000000
   refresh-token-expiration: 2592000000
 
 server:
