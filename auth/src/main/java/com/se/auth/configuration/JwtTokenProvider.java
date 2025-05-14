@@ -1,29 +1,33 @@
 package com.se.auth.configuration;
 
-import io.jsonwebtoken.*;
-import io.jsonwebtoken.security.Keys;
+import java.security.Key;
+import java.util.Date;
+
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Component;
+
+import com.se.auth.Service.UserDetailService;
 import com.se.auth.model.UserModel;
-import com.se.auth.Service.UserService;
-import java.security.Key;
-import java.util.Date;
+
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.security.Keys;
 
 @Component
 public class JwtTokenProvider {
 
     private final JwtConfig jwtConfig;
-    private final UserService userService;
+    private final UserDetailService UserDetailService;
 
-    public JwtTokenProvider(JwtConfig jwtConfig, UserService userService) {
+    public JwtTokenProvider(JwtConfig jwtConfig, UserDetailService UserDetailService) {
         this.jwtConfig = jwtConfig;
-        this.userService = userService;
+        this.UserDetailService = UserDetailService;
     }
 
     public String generateAccessToken(Authentication authentication) {
         User userPrincipal = (User) authentication.getPrincipal();
-        UserModel userModel = userService.loadUserModelByUsername(userPrincipal.getUsername());
+        UserModel userModel = UserDetailService.loadUserModelByUsername(userPrincipal.getUsername());
 
         Date now = new Date();
         Date expiryDate = new Date(now.getTime() + jwtConfig.getAccessTokenExpiration());
@@ -43,7 +47,7 @@ public class JwtTokenProvider {
 
     public String generateRefreshToken(Authentication authentication) {
         User userPrincipal = (User) authentication.getPrincipal();
-        UserModel userModel = userService.loadUserModelByUsername(userPrincipal.getUsername());
+        UserModel userModel = UserDetailService.loadUserModelByUsername(userPrincipal.getUsername());
 
         Date now = new Date();
         Date expiryDate = new Date(now.getTime() + jwtConfig.getRefreshTokenExpiration());

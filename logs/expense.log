@@ -1,0 +1,936 @@
+2025-05-14T00:00:26.319+03:00  INFO 17652 --- [expense] [restartedMain] com.se.expense.ExpenseApplication        : Starting ExpenseApplication using Java 23.0.1 with PID 17652 (E:\Projects\programing-projects\Java\personal_budget_tracker\expense\target\classes started by Jou in E:\Projects\programing-projects\Java\personal_budget_tracker)
+2025-05-14T00:00:26.324+03:00  INFO 17652 --- [expense] [restartedMain] com.se.expense.ExpenseApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-05-14T00:00:26.463+03:00  INFO 17652 --- [expense] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-14T00:00:26.477+03:00  INFO 17652 --- [expense] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 2 JPA repository interfaces.
+2025-05-14T00:00:26.541+03:00  INFO 17652 --- [expense] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=da2fba5e-2f11-3e60-8c06-1ab4f5975928
+2025-05-14T00:00:26.650+03:00  INFO 17652 --- [expense] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8763 (http)
+2025-05-14T00:00:26.651+03:00  INFO 17652 --- [expense] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-14T00:00:26.651+03:00  INFO 17652 --- [expense] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-14T00:00:26.703+03:00  INFO 17652 --- [expense] [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-05-14T00:00:26.704+03:00  INFO 17652 --- [expense] [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2025-05-14T00:00:26.705+03:00  INFO 17652 --- [expense] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 379 ms
+2025-05-14T00:00:26.758+03:00  INFO 17652 --- [expense] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-14T00:00:26.759+03:00  INFO 17652 --- [expense] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-14T00:00:26.766+03:00  INFO 17652 --- [expense] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-14T00:00:26.767+03:00  INFO 17652 --- [expense] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2025-05-14T00:00:26.770+03:00  INFO 17652 --- [expense] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@eb2117
+2025-05-14T00:00:26.770+03:00  INFO 17652 --- [expense] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2025-05-14T00:00:26.772+03:00  WARN 17652 --- [expense] [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2025-05-14T00:00:26.773+03:00  INFO 17652 --- [expense] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 5.5.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-14T00:00:26.829+03:00  INFO 17652 --- [expense] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-14T00:00:26.853+03:00  INFO 17652 --- [expense] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-14T00:00:27.024+03:00  WARN 17652 --- [expense] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-14T00:00:27.054+03:00  INFO 17652 --- [expense] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userService
+2025-05-14T00:00:27.201+03:00  WARN 17652 --- [expense] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-05-14T00:00:27.302+03:00  INFO 17652 --- [expense] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-14T00:00:27.340+03:00  INFO 17652 --- [expense] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-14T00:00:27.371+03:00  WARN 17652 --- [expense] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-14T00:00:27.384+03:00  INFO 17652 --- [expense] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-05-14T00:00:27.386+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-05-14T00:00:27.387+03:00  INFO 17652 --- [expense] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-14T00:00:27.388+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-05-14T00:00:27.388+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-05-14T00:00:27.388+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-05-14T00:00:27.388+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-05-14T00:00:27.388+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-05-14T00:00:27.389+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-05-14T00:00:27.389+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-05-14T00:00:27.423+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-05-14T00:00:27.423+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-05-14T00:00:27.424+03:00  INFO 17652 --- [expense] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-05-14T00:00:27.425+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1747170027425 with initial instances count: 3
+2025-05-14T00:00:27.427+03:00  INFO 17652 --- [expense] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application EXPENSE with eureka with status UP
+2025-05-14T00:00:27.428+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1747170027428, current=UP, previous=STARTING]
+2025-05-14T00:00:27.428+03:00  INFO 17652 --- [expense] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EXPENSE/host.docker.internal:expense:8763: registering service...
+2025-05-14T00:00:27.433+03:00  INFO 17652 --- [expense] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8763 (http) with context path '/'
+2025-05-14T00:00:27.434+03:00  INFO 17652 --- [expense] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8763
+2025-05-14T00:00:27.440+03:00  INFO 17652 --- [expense] [restartedMain] com.se.expense.ExpenseApplication        : Started ExpenseApplication in 1.151 seconds (process running for 231.232)
+2025-05-14T00:00:27.445+03:00  INFO 17652 --- [expense] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-05-14T00:00:27.446+03:00  INFO 17652 --- [expense] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EXPENSE/host.docker.internal:expense:8763 - registration status: 204
+2025-05-14T00:00:37.863+03:00  INFO 17652 --- [expense] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-05-14T00:00:37.864+03:00  INFO 17652 --- [expense] [Thread-9] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application EXPENSE with eureka with status DOWN
+2025-05-14T00:00:37.865+03:00  INFO 17652 --- [expense] [Thread-9] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1747170037865, current=DOWN, previous=UP]
+2025-05-14T00:00:37.865+03:00  INFO 17652 --- [expense] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EXPENSE/host.docker.internal:expense:8763: registering service...
+2025-05-14T00:00:37.865+03:00  INFO 17652 --- [expense] [Thread-9] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-14T00:00:37.869+03:00  INFO 17652 --- [expense] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-14T00:00:37.871+03:00  INFO 17652 --- [expense] [Thread-9] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-14T00:00:37.873+03:00  INFO 17652 --- [expense] [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2025-05-14T00:00:37.877+03:00  INFO 17652 --- [expense] [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2025-05-14T00:00:37.877+03:00  INFO 17652 --- [expense] [Thread-9] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-05-14T00:00:37.881+03:00  INFO 17652 --- [expense] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EXPENSE/host.docker.internal:expense:8763 - registration status: 204
+2025-05-14T00:00:37.881+03:00  INFO 17652 --- [expense] [Thread-9] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-05-14T00:00:37.885+03:00  INFO 17652 --- [expense] [Thread-9] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EXPENSE/host.docker.internal:expense:8763 - deregister  status: 200
+2025-05-14T00:00:37.886+03:00  INFO 17652 --- [expense] [Thread-9] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-05-14T00:00:37.963+03:00  INFO 17652 --- [expense] [restartedMain] com.se.expense.ExpenseApplication        : Starting ExpenseApplication using Java 23.0.1 with PID 17652 (E:\Projects\programing-projects\Java\personal_budget_tracker\expense\target\classes started by Jou in E:\Projects\programing-projects\Java\personal_budget_tracker)
+2025-05-14T00:00:37.964+03:00  INFO 17652 --- [expense] [restartedMain] com.se.expense.ExpenseApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-05-14T00:00:38.304+03:00  INFO 17652 --- [expense] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-14T00:00:38.343+03:00  INFO 17652 --- [expense] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 2 JPA repository interfaces.
+2025-05-14T00:00:38.492+03:00  INFO 17652 --- [expense] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=da2fba5e-2f11-3e60-8c06-1ab4f5975928
+2025-05-14T00:00:38.627+03:00  INFO 17652 --- [expense] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8763 (http)
+2025-05-14T00:00:38.628+03:00  INFO 17652 --- [expense] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-14T00:00:38.629+03:00  INFO 17652 --- [expense] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-14T00:00:38.680+03:00  INFO 17652 --- [expense] [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-05-14T00:00:38.681+03:00  INFO 17652 --- [expense] [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2025-05-14T00:00:38.681+03:00  INFO 17652 --- [expense] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 716 ms
+2025-05-14T00:00:38.740+03:00  INFO 17652 --- [expense] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-14T00:00:38.743+03:00  INFO 17652 --- [expense] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-14T00:00:38.751+03:00  INFO 17652 --- [expense] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-14T00:00:38.751+03:00  INFO 17652 --- [expense] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2025-05-14T00:00:38.756+03:00  INFO 17652 --- [expense] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@602bc832
+2025-05-14T00:00:38.756+03:00  INFO 17652 --- [expense] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2025-05-14T00:00:38.758+03:00  WARN 17652 --- [expense] [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2025-05-14T00:00:38.759+03:00  INFO 17652 --- [expense] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-4)']
+	Database driver: undefined/unknown
+	Database version: 5.5.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-14T00:00:38.816+03:00  INFO 17652 --- [expense] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-14T00:00:38.840+03:00  INFO 17652 --- [expense] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-14T00:00:38.955+03:00  WARN 17652 --- [expense] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-14T00:00:38.991+03:00  INFO 17652 --- [expense] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userService
+2025-05-14T00:00:39.131+03:00  WARN 17652 --- [expense] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-05-14T00:00:39.227+03:00  INFO 17652 --- [expense] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-14T00:00:39.263+03:00  INFO 17652 --- [expense] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-14T00:00:39.290+03:00  WARN 17652 --- [expense] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-14T00:00:39.299+03:00  INFO 17652 --- [expense] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-05-14T00:00:39.303+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-05-14T00:00:39.303+03:00  INFO 17652 --- [expense] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-14T00:00:39.304+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-05-14T00:00:39.304+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-05-14T00:00:39.304+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-05-14T00:00:39.304+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-05-14T00:00:39.304+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-05-14T00:00:39.305+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-05-14T00:00:39.305+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-05-14T00:00:39.335+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-05-14T00:00:39.336+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-05-14T00:00:39.336+03:00  INFO 17652 --- [expense] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-05-14T00:00:39.336+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1747170039336 with initial instances count: 3
+2025-05-14T00:00:39.338+03:00  INFO 17652 --- [expense] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application EXPENSE with eureka with status UP
+2025-05-14T00:00:39.338+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1747170039338, current=UP, previous=STARTING]
+2025-05-14T00:00:39.338+03:00  INFO 17652 --- [expense] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EXPENSE/host.docker.internal:expense:8763: registering service...
+2025-05-14T00:00:39.344+03:00  INFO 17652 --- [expense] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8763 (http) with context path '/'
+2025-05-14T00:00:39.345+03:00  INFO 17652 --- [expense] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8763
+2025-05-14T00:00:39.350+03:00  INFO 17652 --- [expense] [restartedMain] com.se.expense.ExpenseApplication        : Started ExpenseApplication in 1.417 seconds (process running for 243.142)
+2025-05-14T00:00:39.351+03:00  INFO 17652 --- [expense] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-05-14T00:00:39.354+03:00  INFO 17652 --- [expense] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EXPENSE/host.docker.internal:expense:8763 - registration status: 204
+2025-05-14T00:00:50.807+03:00  INFO 17652 --- [expense] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-05-14T00:00:50.808+03:00  INFO 17652 --- [expense] [Thread-19] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application EXPENSE with eureka with status DOWN
+2025-05-14T00:00:50.808+03:00  INFO 17652 --- [expense] [Thread-19] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1747170050808, current=DOWN, previous=UP]
+2025-05-14T00:00:50.808+03:00  INFO 17652 --- [expense] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EXPENSE/host.docker.internal:expense:8763: registering service...
+2025-05-14T00:00:50.808+03:00  INFO 17652 --- [expense] [Thread-19] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-14T00:00:50.810+03:00  INFO 17652 --- [expense] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-14T00:00:50.811+03:00  INFO 17652 --- [expense] [Thread-19] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-14T00:00:50.813+03:00  INFO 17652 --- [expense] [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2025-05-14T00:00:50.815+03:00  INFO 17652 --- [expense] [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2025-05-14T00:00:50.815+03:00  INFO 17652 --- [expense] [Thread-19] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-05-14T00:00:50.825+03:00  INFO 17652 --- [expense] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EXPENSE/host.docker.internal:expense:8763 - registration status: 204
+2025-05-14T00:00:50.825+03:00  INFO 17652 --- [expense] [Thread-19] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-05-14T00:00:50.828+03:00  INFO 17652 --- [expense] [Thread-19] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EXPENSE/host.docker.internal:expense:8763 - deregister  status: 200
+2025-05-14T00:00:50.829+03:00  INFO 17652 --- [expense] [Thread-19] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-05-14T00:00:50.894+03:00  INFO 17652 --- [expense] [restartedMain] com.se.expense.ExpenseApplication        : Starting ExpenseApplication using Java 23.0.1 with PID 17652 (E:\Projects\programing-projects\Java\personal_budget_tracker\expense\target\classes started by Jou in E:\Projects\programing-projects\Java\personal_budget_tracker)
+2025-05-14T00:00:50.894+03:00  INFO 17652 --- [expense] [restartedMain] com.se.expense.ExpenseApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-05-14T00:00:51.015+03:00  INFO 17652 --- [expense] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-14T00:00:51.024+03:00  INFO 17652 --- [expense] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 2 JPA repository interfaces.
+2025-05-14T00:00:51.067+03:00  INFO 17652 --- [expense] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=da2fba5e-2f11-3e60-8c06-1ab4f5975928
+2025-05-14T00:00:51.122+03:00  INFO 17652 --- [expense] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8763 (http)
+2025-05-14T00:00:51.123+03:00  INFO 17652 --- [expense] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-14T00:00:51.123+03:00  INFO 17652 --- [expense] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-14T00:00:51.177+03:00  INFO 17652 --- [expense] [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-05-14T00:00:51.178+03:00  INFO 17652 --- [expense] [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2025-05-14T00:00:51.178+03:00  INFO 17652 --- [expense] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 283 ms
+2025-05-14T00:00:51.221+03:00  INFO 17652 --- [expense] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-14T00:00:51.224+03:00  INFO 17652 --- [expense] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-14T00:00:51.231+03:00  INFO 17652 --- [expense] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-14T00:00:51.236+03:00  INFO 17652 --- [expense] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2025-05-14T00:00:51.240+03:00  INFO 17652 --- [expense] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7d13e63a
+2025-05-14T00:00:51.240+03:00  INFO 17652 --- [expense] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2025-05-14T00:00:51.241+03:00  WARN 17652 --- [expense] [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2025-05-14T00:00:51.241+03:00  INFO 17652 --- [expense] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-5)']
+	Database driver: undefined/unknown
+	Database version: 5.5.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-14T00:00:51.293+03:00  INFO 17652 --- [expense] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-14T00:00:51.314+03:00  INFO 17652 --- [expense] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-14T00:00:51.421+03:00  WARN 17652 --- [expense] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-14T00:00:51.447+03:00  INFO 17652 --- [expense] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userService
+2025-05-14T00:00:51.535+03:00  WARN 17652 --- [expense] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-05-14T00:00:51.575+03:00  INFO 17652 --- [expense] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-14T00:00:51.606+03:00  INFO 17652 --- [expense] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-14T00:00:51.619+03:00  WARN 17652 --- [expense] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-14T00:00:51.627+03:00  INFO 17652 --- [expense] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-05-14T00:00:51.629+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-05-14T00:00:51.630+03:00  INFO 17652 --- [expense] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-14T00:00:51.630+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-05-14T00:00:51.630+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-05-14T00:00:51.631+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-05-14T00:00:51.631+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-05-14T00:00:51.631+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-05-14T00:00:51.631+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-05-14T00:00:51.631+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-05-14T00:00:51.657+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-05-14T00:00:51.658+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-05-14T00:00:51.658+03:00  INFO 17652 --- [expense] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-05-14T00:00:51.658+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1747170051658 with initial instances count: 3
+2025-05-14T00:00:51.661+03:00  INFO 17652 --- [expense] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application EXPENSE with eureka with status UP
+2025-05-14T00:00:51.661+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1747170051661, current=UP, previous=STARTING]
+2025-05-14T00:00:51.661+03:00  INFO 17652 --- [expense] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EXPENSE/host.docker.internal:expense:8763: registering service...
+2025-05-14T00:00:51.666+03:00  INFO 17652 --- [expense] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8763 (http) with context path '/'
+2025-05-14T00:00:51.667+03:00  INFO 17652 --- [expense] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8763
+2025-05-14T00:00:51.671+03:00  INFO 17652 --- [expense] [restartedMain] com.se.expense.ExpenseApplication        : Started ExpenseApplication in 0.802 seconds (process running for 255.462)
+2025-05-14T00:00:51.673+03:00  INFO 17652 --- [expense] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-05-14T00:00:51.676+03:00  INFO 17652 --- [expense] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EXPENSE/host.docker.internal:expense:8763 - registration status: 204
+2025-05-14T00:00:59.114+03:00  INFO 17652 --- [expense] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-05-14T00:00:59.115+03:00  INFO 17652 --- [expense] [Thread-25] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application EXPENSE with eureka with status DOWN
+2025-05-14T00:00:59.115+03:00  INFO 17652 --- [expense] [Thread-25] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1747170059115, current=DOWN, previous=UP]
+2025-05-14T00:00:59.115+03:00  INFO 17652 --- [expense] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EXPENSE/host.docker.internal:expense:8763: registering service...
+2025-05-14T00:00:59.116+03:00  INFO 17652 --- [expense] [Thread-25] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-14T00:00:59.118+03:00  INFO 17652 --- [expense] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-14T00:00:59.120+03:00  INFO 17652 --- [expense] [Thread-25] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-14T00:00:59.121+03:00  INFO 17652 --- [expense] [Thread-25] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2025-05-14T00:00:59.123+03:00  INFO 17652 --- [expense] [Thread-25] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2025-05-14T00:00:59.123+03:00  INFO 17652 --- [expense] [Thread-25] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-05-14T00:00:59.131+03:00  INFO 17652 --- [expense] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EXPENSE/host.docker.internal:expense:8763 - registration status: 204
+2025-05-14T00:00:59.131+03:00  INFO 17652 --- [expense] [Thread-25] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-05-14T00:00:59.135+03:00  INFO 17652 --- [expense] [Thread-25] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EXPENSE/host.docker.internal:expense:8763 - deregister  status: 200
+2025-05-14T00:00:59.135+03:00  INFO 17652 --- [expense] [Thread-25] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-05-14T00:00:59.189+03:00  INFO 17652 --- [expense] [restartedMain] com.se.expense.ExpenseApplication        : Starting ExpenseApplication using Java 23.0.1 with PID 17652 (E:\Projects\programing-projects\Java\personal_budget_tracker\expense\target\classes started by Jou in E:\Projects\programing-projects\Java\personal_budget_tracker)
+2025-05-14T00:00:59.190+03:00  INFO 17652 --- [expense] [restartedMain] com.se.expense.ExpenseApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-05-14T00:00:59.298+03:00  INFO 17652 --- [expense] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-14T00:00:59.311+03:00  INFO 17652 --- [expense] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 2 JPA repository interfaces.
+2025-05-14T00:00:59.385+03:00  INFO 17652 --- [expense] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=da2fba5e-2f11-3e60-8c06-1ab4f5975928
+2025-05-14T00:00:59.436+03:00  INFO 17652 --- [expense] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8763 (http)
+2025-05-14T00:00:59.436+03:00  INFO 17652 --- [expense] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-14T00:00:59.437+03:00  INFO 17652 --- [expense] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-14T00:00:59.484+03:00  INFO 17652 --- [expense] [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-05-14T00:00:59.485+03:00  INFO 17652 --- [expense] [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2025-05-14T00:00:59.486+03:00  INFO 17652 --- [expense] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 295 ms
+2025-05-14T00:00:59.575+03:00  INFO 17652 --- [expense] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-14T00:00:59.578+03:00  INFO 17652 --- [expense] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-14T00:00:59.597+03:00  INFO 17652 --- [expense] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-14T00:00:59.599+03:00  INFO 17652 --- [expense] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2025-05-14T00:00:59.603+03:00  INFO 17652 --- [expense] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection com.mysql.cj.jdbc.ConnectionImpl@62cf026
+2025-05-14T00:00:59.603+03:00  INFO 17652 --- [expense] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2025-05-14T00:00:59.604+03:00  WARN 17652 --- [expense] [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2025-05-14T00:00:59.605+03:00  INFO 17652 --- [expense] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-6)']
+	Database driver: undefined/unknown
+	Database version: 5.5.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-14T00:00:59.660+03:00  INFO 17652 --- [expense] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-14T00:00:59.679+03:00  INFO 17652 --- [expense] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-14T00:00:59.766+03:00  WARN 17652 --- [expense] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-14T00:00:59.785+03:00  INFO 17652 --- [expense] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userService
+2025-05-14T00:00:59.877+03:00  WARN 17652 --- [expense] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-05-14T00:00:59.918+03:00  INFO 17652 --- [expense] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-14T00:00:59.948+03:00  INFO 17652 --- [expense] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-14T00:00:59.964+03:00  WARN 17652 --- [expense] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-14T00:00:59.969+03:00  INFO 17652 --- [expense] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-05-14T00:00:59.970+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-05-14T00:00:59.970+03:00  INFO 17652 --- [expense] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-14T00:00:59.970+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-05-14T00:00:59.970+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-05-14T00:00:59.970+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-05-14T00:00:59.970+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-05-14T00:00:59.970+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-05-14T00:00:59.971+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-05-14T00:00:59.971+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-05-14T00:00:59.993+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-05-14T00:00:59.994+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-05-14T00:00:59.994+03:00  INFO 17652 --- [expense] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-05-14T00:00:59.994+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1747170059994 with initial instances count: 3
+2025-05-14T00:00:59.996+03:00  INFO 17652 --- [expense] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application EXPENSE with eureka with status UP
+2025-05-14T00:00:59.996+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1747170059996, current=UP, previous=STARTING]
+2025-05-14T00:00:59.996+03:00  INFO 17652 --- [expense] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EXPENSE/host.docker.internal:expense:8763: registering service...
+2025-05-14T00:01:00.001+03:00  INFO 17652 --- [expense] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8763 (http) with context path '/'
+2025-05-14T00:01:00.002+03:00  INFO 17652 --- [expense] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8763
+2025-05-14T00:01:00.005+03:00  INFO 17652 --- [expense] [restartedMain] com.se.expense.ExpenseApplication        : Started ExpenseApplication in 0.835 seconds (process running for 263.797)
+2025-05-14T00:01:00.008+03:00  INFO 17652 --- [expense] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-05-14T00:01:00.008+03:00  INFO 17652 --- [expense] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EXPENSE/host.docker.internal:expense:8763 - registration status: 204
+2025-05-14T00:02:23.765+03:00  INFO 17652 --- [expense] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-05-14T00:02:23.765+03:00  INFO 17652 --- [expense] [Thread-31] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application EXPENSE with eureka with status DOWN
+2025-05-14T00:02:23.766+03:00  INFO 17652 --- [expense] [Thread-31] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1747170143766, current=DOWN, previous=UP]
+2025-05-14T00:02:23.766+03:00  INFO 17652 --- [expense] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EXPENSE/host.docker.internal:expense:8763: registering service...
+2025-05-14T00:02:23.766+03:00  INFO 17652 --- [expense] [Thread-31] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-14T00:02:23.774+03:00  INFO 17652 --- [expense] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-14T00:02:23.776+03:00  INFO 17652 --- [expense] [Thread-31] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-14T00:02:23.777+03:00  INFO 17652 --- [expense] [Thread-31] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2025-05-14T00:02:23.780+03:00  INFO 17652 --- [expense] [Thread-31] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2025-05-14T00:02:23.781+03:00  INFO 17652 --- [expense] [Thread-31] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-05-14T00:02:23.785+03:00  INFO 17652 --- [expense] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EXPENSE/host.docker.internal:expense:8763 - registration status: 204
+2025-05-14T00:02:23.785+03:00  INFO 17652 --- [expense] [Thread-31] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-05-14T00:02:23.791+03:00  INFO 17652 --- [expense] [Thread-31] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EXPENSE/host.docker.internal:expense:8763 - deregister  status: 200
+2025-05-14T00:02:23.791+03:00  INFO 17652 --- [expense] [Thread-31] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-05-14T00:02:23.883+03:00  INFO 17652 --- [expense] [restartedMain] com.se.expense.ExpenseApplication        : Starting ExpenseApplication using Java 23.0.1 with PID 17652 (E:\Projects\programing-projects\Java\personal_budget_tracker\expense\target\classes started by Jou in E:\Projects\programing-projects\Java\personal_budget_tracker)
+2025-05-14T00:02:23.884+03:00  INFO 17652 --- [expense] [restartedMain] com.se.expense.ExpenseApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-05-14T00:02:23.998+03:00  INFO 17652 --- [expense] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-14T00:02:24.015+03:00  INFO 17652 --- [expense] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 2 JPA repository interfaces.
+2025-05-14T00:02:24.069+03:00  INFO 17652 --- [expense] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=da2fba5e-2f11-3e60-8c06-1ab4f5975928
+2025-05-14T00:02:24.124+03:00  INFO 17652 --- [expense] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8763 (http)
+2025-05-14T00:02:24.125+03:00  INFO 17652 --- [expense] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-14T00:02:24.126+03:00  INFO 17652 --- [expense] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-14T00:02:24.169+03:00  INFO 17652 --- [expense] [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-05-14T00:02:24.169+03:00  INFO 17652 --- [expense] [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2025-05-14T00:02:24.169+03:00  INFO 17652 --- [expense] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 284 ms
+2025-05-14T00:02:24.204+03:00  INFO 17652 --- [expense] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-14T00:02:24.205+03:00  INFO 17652 --- [expense] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-14T00:02:24.211+03:00  INFO 17652 --- [expense] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-14T00:02:24.213+03:00  INFO 17652 --- [expense] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2025-05-14T00:02:24.216+03:00  INFO 17652 --- [expense] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection com.mysql.cj.jdbc.ConnectionImpl@14be0a77
+2025-05-14T00:02:24.217+03:00  INFO 17652 --- [expense] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2025-05-14T00:02:24.218+03:00  WARN 17652 --- [expense] [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2025-05-14T00:02:24.218+03:00  INFO 17652 --- [expense] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-7)']
+	Database driver: undefined/unknown
+	Database version: 5.5.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-14T00:02:24.270+03:00  INFO 17652 --- [expense] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-14T00:02:24.301+03:00  INFO 17652 --- [expense] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-14T00:02:24.409+03:00  WARN 17652 --- [expense] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-14T00:02:24.426+03:00  INFO 17652 --- [expense] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userService
+2025-05-14T00:02:24.501+03:00  WARN 17652 --- [expense] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-05-14T00:02:24.541+03:00  INFO 17652 --- [expense] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-14T00:02:24.567+03:00  INFO 17652 --- [expense] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-14T00:02:24.585+03:00  WARN 17652 --- [expense] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-14T00:02:24.591+03:00  INFO 17652 --- [expense] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-05-14T00:02:24.595+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-05-14T00:02:24.595+03:00  INFO 17652 --- [expense] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-14T00:02:24.595+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-05-14T00:02:24.595+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-05-14T00:02:24.596+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-05-14T00:02:24.596+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-05-14T00:02:24.596+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-05-14T00:02:24.596+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-05-14T00:02:24.596+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-05-14T00:02:24.615+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-05-14T00:02:24.616+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-05-14T00:02:24.616+03:00  INFO 17652 --- [expense] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-05-14T00:02:24.617+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1747170144617 with initial instances count: 4
+2025-05-14T00:02:24.618+03:00  INFO 17652 --- [expense] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application EXPENSE with eureka with status UP
+2025-05-14T00:02:24.618+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1747170144618, current=UP, previous=STARTING]
+2025-05-14T00:02:24.618+03:00  INFO 17652 --- [expense] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EXPENSE/host.docker.internal:expense:8763: registering service...
+2025-05-14T00:02:24.621+03:00  INFO 17652 --- [expense] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8763 (http) with context path '/'
+2025-05-14T00:02:24.623+03:00  INFO 17652 --- [expense] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8763
+2025-05-14T00:02:24.628+03:00  INFO 17652 --- [expense] [restartedMain] com.se.expense.ExpenseApplication        : Started ExpenseApplication in 0.781 seconds (process running for 348.419)
+2025-05-14T00:02:24.629+03:00  INFO 17652 --- [expense] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-05-14T00:02:24.631+03:00  INFO 17652 --- [expense] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EXPENSE/host.docker.internal:expense:8763 - registration status: 204
+2025-05-14T00:06:00.205+03:00  INFO 17652 --- [expense] [http-nio-8763-exec-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-14T00:06:00.206+03:00  INFO 17652 --- [expense] [http-nio-8763-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-14T00:06:00.209+03:00  INFO 17652 --- [expense] [http-nio-8763-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-05-14T00:06:00.387+03:00  INFO 17652 --- [expense] [http-nio-8763-exec-1] com.se.expense.aspects.LoggingAspect     : Method getSummary() executed successfully in 41 ms.
+2025-05-14T00:06:20.379+03:00  INFO 17652 --- [expense] [http-nio-8763-exec-2] com.se.expense.aspects.LoggingAspect     : Method getPie() executed successfully in 3 ms.
+2025-05-14T00:07:20.498+03:00  INFO 17652 --- [expense] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-05-14T00:07:20.499+03:00  INFO 17652 --- [expense] [Thread-37] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application EXPENSE with eureka with status DOWN
+2025-05-14T00:07:20.500+03:00  INFO 17652 --- [expense] [Thread-37] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1747170440500, current=DOWN, previous=UP]
+2025-05-14T00:07:20.501+03:00  INFO 17652 --- [expense] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EXPENSE/host.docker.internal:expense:8763: registering service...
+2025-05-14T00:07:20.501+03:00  INFO 17652 --- [expense] [Thread-37] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-14T00:07:20.506+03:00  INFO 17652 --- [expense] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-14T00:07:20.509+03:00  INFO 17652 --- [expense] [Thread-37] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-14T00:07:20.510+03:00  INFO 17652 --- [expense] [Thread-37] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2025-05-14T00:07:20.511+03:00  INFO 17652 --- [expense] [Thread-37] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2025-05-14T00:07:20.511+03:00  INFO 17652 --- [expense] [Thread-37] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-05-14T00:07:20.515+03:00  INFO 17652 --- [expense] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EXPENSE/host.docker.internal:expense:8763 - registration status: 204
+2025-05-14T00:07:20.516+03:00  INFO 17652 --- [expense] [Thread-37] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-05-14T00:07:20.520+03:00  INFO 17652 --- [expense] [Thread-37] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EXPENSE/host.docker.internal:expense:8763 - deregister  status: 200
+2025-05-14T00:07:20.521+03:00  INFO 17652 --- [expense] [Thread-37] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-05-14T00:07:20.598+03:00  INFO 17652 --- [expense] [restartedMain] com.se.expense.ExpenseApplication        : Starting ExpenseApplication using Java 23.0.1 with PID 17652 (E:\Projects\programing-projects\Java\personal_budget_tracker\expense\target\classes started by Jou in E:\Projects\programing-projects\Java\personal_budget_tracker)
+2025-05-14T00:07:20.598+03:00  INFO 17652 --- [expense] [restartedMain] com.se.expense.ExpenseApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-05-14T00:07:20.764+03:00  INFO 17652 --- [expense] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-14T00:07:20.784+03:00  INFO 17652 --- [expense] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 2 JPA repository interfaces.
+2025-05-14T00:07:20.876+03:00  INFO 17652 --- [expense] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=da2fba5e-2f11-3e60-8c06-1ab4f5975928
+2025-05-14T00:07:20.940+03:00  INFO 17652 --- [expense] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8763 (http)
+2025-05-14T00:07:20.941+03:00  INFO 17652 --- [expense] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-14T00:07:20.941+03:00  INFO 17652 --- [expense] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-14T00:07:20.997+03:00  INFO 17652 --- [expense] [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-05-14T00:07:20.997+03:00  INFO 17652 --- [expense] [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2025-05-14T00:07:20.998+03:00  INFO 17652 --- [expense] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 397 ms
+2025-05-14T00:07:21.037+03:00  INFO 17652 --- [expense] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-14T00:07:21.039+03:00  INFO 17652 --- [expense] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-14T00:07:21.045+03:00  INFO 17652 --- [expense] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-14T00:07:21.046+03:00  INFO 17652 --- [expense] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2025-05-14T00:07:21.050+03:00  INFO 17652 --- [expense] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4e26e0ad
+2025-05-14T00:07:21.050+03:00  INFO 17652 --- [expense] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2025-05-14T00:07:21.051+03:00  WARN 17652 --- [expense] [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2025-05-14T00:07:21.051+03:00  INFO 17652 --- [expense] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-8)']
+	Database driver: undefined/unknown
+	Database version: 5.5.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-14T00:07:21.128+03:00  INFO 17652 --- [expense] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-14T00:07:21.151+03:00  INFO 17652 --- [expense] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-14T00:07:21.253+03:00  WARN 17652 --- [expense] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-14T00:07:21.269+03:00  INFO 17652 --- [expense] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userService
+2025-05-14T00:07:21.336+03:00  WARN 17652 --- [expense] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-05-14T00:07:21.381+03:00  INFO 17652 --- [expense] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-14T00:07:21.420+03:00  INFO 17652 --- [expense] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-14T00:07:21.431+03:00  WARN 17652 --- [expense] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-14T00:07:21.439+03:00  INFO 17652 --- [expense] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-05-14T00:07:21.443+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-05-14T00:07:21.443+03:00  INFO 17652 --- [expense] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-14T00:07:21.444+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-05-14T00:07:21.444+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-05-14T00:07:21.444+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-05-14T00:07:21.444+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-05-14T00:07:21.444+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-05-14T00:07:21.444+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-05-14T00:07:21.444+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-05-14T00:07:21.464+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-05-14T00:07:21.465+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-05-14T00:07:21.465+03:00  INFO 17652 --- [expense] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-05-14T00:07:21.465+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1747170441465 with initial instances count: 4
+2025-05-14T00:07:21.467+03:00  INFO 17652 --- [expense] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application EXPENSE with eureka with status UP
+2025-05-14T00:07:21.467+03:00  INFO 17652 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1747170441467, current=UP, previous=STARTING]
+2025-05-14T00:07:21.467+03:00  INFO 17652 --- [expense] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EXPENSE/host.docker.internal:expense:8763: registering service...
+2025-05-14T00:07:21.471+03:00  INFO 17652 --- [expense] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8763 (http) with context path '/'
+2025-05-14T00:07:21.471+03:00  INFO 17652 --- [expense] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8763
+2025-05-14T00:07:21.475+03:00  INFO 17652 --- [expense] [restartedMain] com.se.expense.ExpenseApplication        : Started ExpenseApplication in 0.905 seconds (process running for 645.267)
+2025-05-14T00:07:21.477+03:00  INFO 17652 --- [expense] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-05-14T00:07:21.480+03:00  INFO 17652 --- [expense] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EXPENSE/host.docker.internal:expense:8763 - registration status: 204
+2025-05-14T00:07:27.824+03:00  INFO 17652 --- [expense] [http-nio-8763-exec-2] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-14T00:07:27.825+03:00  INFO 17652 --- [expense] [http-nio-8763-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-14T00:07:27.825+03:00  INFO 17652 --- [expense] [http-nio-8763-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-05-14T00:07:27.837+03:00  INFO 17652 --- [expense] [http-nio-8763-exec-2] com.se.expense.aspects.LoggingAspect     : Method getAllExpenses() executed successfully in 1 ms.
+2025-05-14T00:07:31.998+03:00  INFO 17652 --- [expense] [http-nio-8763-exec-1] com.se.expense.aspects.LoggingAspect     : Method getPie() executed successfully in 4 ms.
+2025-05-14T00:07:34.918+03:00  INFO 17652 --- [expense] [http-nio-8763-exec-3] com.se.expense.aspects.LoggingAspect     : Method getSummary() executed successfully in 17 ms.
+2025-05-14T00:07:39.205+03:00  INFO 17652 --- [expense] [http-nio-8763-exec-6] com.se.expense.aspects.LoggingAspect     : Method getCategoryExpenses() executed successfully in 3 ms.
+2025-05-14T00:07:47.138+03:00  INFO 17652 --- [expense] [http-nio-8763-exec-7] com.se.expense.aspects.LoggingAspect     : Method addExpense() executed successfully in 3 ms.
+2025-05-14T00:07:50.926+03:00  INFO 17652 --- [expense] [http-nio-8763-exec-10] com.se.expense.aspects.LoggingAspect     : Method addExpense() executed successfully in 89 ms.
+2025-05-14T00:08:00.726+03:00  INFO 17652 --- [expense] [http-nio-8763-exec-4] com.se.expense.aspects.LoggingAspect     : Method updateExpense() executed successfully in 78 ms.
+2025-05-14T00:08:09.448+03:00  INFO 17652 --- [expense] [http-nio-8763-exec-5] com.se.expense.aspects.LoggingAspect     : Method deleteExpense() executed successfully in 2 ms.
+2025-05-14T00:08:23.815+03:00  INFO 17652 --- [expense] [http-nio-8763-exec-8] com.se.expense.aspects.LoggingAspect     : Method deleteExpense() executed successfully in 104 ms.
+2025-05-14T00:45:53.218+03:00  INFO 10520 --- [expense] [restartedMain] com.se.expense.ExpenseApplication        : Starting ExpenseApplication using Java 21.0.6 with PID 10520 (D:\yusf\projects\se\personal_budget_tracker\expense\target\classes started by Lil in D:\yusf\projects\se\personal_budget_tracker)
+2025-05-14T00:45:53.244+03:00  INFO 10520 --- [expense] [restartedMain] com.se.expense.ExpenseApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-05-14T00:45:53.483+03:00  INFO 10520 --- [expense] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-14T00:45:53.486+03:00  INFO 10520 --- [expense] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-14T00:45:56.507+03:00  INFO 10520 --- [expense] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-14T00:45:57.025+03:00  INFO 10520 --- [expense] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 440 ms. Found 2 JPA repository interfaces.
+2025-05-14T00:45:58.052+03:00  INFO 10520 --- [expense] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=da2fba5e-2f11-3e60-8c06-1ab4f5975928
+2025-05-14T00:46:00.612+03:00  INFO 10520 --- [expense] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8763 (http)
+2025-05-14T00:46:00.683+03:00  INFO 10520 --- [expense] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-14T00:46:00.744+03:00  INFO 10520 --- [expense] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-14T00:46:01.393+03:00  INFO 10520 --- [expense] [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-05-14T00:46:01.407+03:00  INFO 10520 --- [expense] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-14T00:46:01.411+03:00  INFO 10520 --- [expense] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 7920 ms
+2025-05-14T00:46:02.193+03:00  INFO 10520 --- [expense] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-14T00:46:02.379+03:00  INFO 10520 --- [expense] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-05-14T00:46:02.494+03:00  INFO 10520 --- [expense] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-14T00:46:03.449+03:00  INFO 10520 --- [expense] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-14T00:46:03.558+03:00  INFO 10520 --- [expense] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-14T00:46:04.833+03:00  WARN 10520 --- [expense] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 08S01
+2025-05-14T00:46:04.834+03:00 ERROR 10520 --- [expense] [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2025-05-14T00:46:04.838+03:00  WARN 10520 --- [expense] [restartedMain] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
+
+org.hibernate.exception.JDBCConnectionException: unable to obtain isolated JDBC connection [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:100) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:320) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:226) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:194) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1442) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1513) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.6.jar:6.2.6]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.6.jar:6.2.6]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.6.jar:6.2.6]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.6.jar:6.2.6]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1865) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1814) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:691) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:513) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1367) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1197) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1717) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1466) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1681) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1627) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1387) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1224) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1681) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1627) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1387) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1224) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1739) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1627) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1387) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1224) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:211) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:174) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:169) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:154) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:87) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:271) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:245) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4464) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:412) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:870) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:438) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:128) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:107) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:517) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:219) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:193) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:167) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-6.2.6.jar:6.2.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351) ~[spring-boot-3.4.5.jar:3.4.5]
+	at com.se.expense.ExpenseApplication.main(ExpenseApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.4.5.jar:3.4.5]
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:175) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:446) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:239) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:188) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-5.1.0.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:467) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	... 136 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[na:na]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:62) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:150) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:166) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:121) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:945) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	... 149 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:751) ~[na:na]
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	... 152 common frames omitted
+
+2025-05-14T00:46:04.888+03:00 ERROR 10520 --- [expense] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2025-05-14T00:46:04.896+03:00 ERROR 10520 --- [expense] [restartedMain] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthenticationFilter' defined in file [D:\yusf\projects\se\personal_budget_tracker\expense\target\classes\com\se\expense\configuration\JwtAuthenticationFilter.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'jwtTokenProvider' defined in file [D:\yusf\projects\se\personal_budget_tracker\expense\target\classes\com\se\expense\configuration\JwtTokenProvider.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'userService' defined in file [D:\yusf\projects\se\personal_budget_tracker\expense\target\classes\com\se\expense\Service\UserService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in com.se.expense.Repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+2025-05-14T00:46:04.964+03:00  INFO 10520 --- [expense] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-05-14T00:46:04.979+03:00  WARN 10520 --- [expense] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2025-05-14T00:46:05.015+03:00  INFO 10520 --- [expense] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-05-14T00:46:05.075+03:00 ERROR 10520 --- [expense] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:170) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-6.2.6.jar:6.2.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351) ~[spring-boot-3.4.5.jar:3.4.5]
+	at com.se.expense.ExpenseApplication.main(ExpenseApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.4.5.jar:3.4.5]
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:147) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:107) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:517) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:219) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:193) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:167) ~[spring-boot-3.4.5.jar:3.4.5]
+	... 11 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtAuthenticationFilter' defined in file [D:\yusf\projects\se\personal_budget_tracker\expense\target\classes\com\se\expense\configuration\JwtAuthenticationFilter.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'jwtTokenProvider' defined in file [D:\yusf\projects\se\personal_budget_tracker\expense\target\classes\com\se\expense\configuration\JwtTokenProvider.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'userService' defined in file [D:\yusf\projects\se\personal_budget_tracker\expense\target\classes\com\se\expense\Service\UserService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in com.se.expense.Repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1387) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1224) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:211) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:174) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:169) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:154) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:87) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:271) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:245) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4464) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:412) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:870) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:438) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:128) ~[spring-boot-3.4.5.jar:3.4.5]
+	... 16 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtTokenProvider' defined in file [D:\yusf\projects\se\personal_budget_tracker\expense\target\classes\com\se\expense\configuration\JwtTokenProvider.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'userService' defined in file [D:\yusf\projects\se\personal_budget_tracker\expense\target\classes\com\se\expense\Service\UserService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in com.se.expense.Repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1387) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1224) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1739) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1627) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.2.6.jar:6.2.6]
+	... 57 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService' defined in file [D:\yusf\projects\se\personal_budget_tracker\expense\target\classes\com\se\expense\Service\UserService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in com.se.expense.Repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1387) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1224) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1681) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1627) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.2.6.jar:6.2.6]
+	... 71 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in com.se.expense.Repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1717) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1466) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1681) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1627) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.2.6.jar:6.2.6]
+	... 84 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jpaSharedEM_entityManagerFactory': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:691) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:513) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1367) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1197) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365) ~[spring-beans-6.2.6.jar:6.2.6]
+	... 97 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1818) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365) ~[spring-beans-6.2.6.jar:6.2.6]
+	... 109 common frames omitted
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:276) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:226) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:194) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1442) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1513) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.6.jar:6.2.6]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.6.jar:6.2.6]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.6.jar:6.2.6]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.6.jar:6.2.6]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1865) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1814) ~[spring-beans-6.2.6.jar:6.2.6]
+	... 116 common frames omitted
+Caused by: org.hibernate.HibernateException: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:191) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:87) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentWithDefaults(JdbcEnvironmentInitiator.java:181) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:392) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	... 131 common frames omitted
+
+2025-05-14T00:47:04.642+03:00  INFO 2056 --- [expense] [restartedMain] com.se.expense.ExpenseApplication        : Starting ExpenseApplication using Java 21.0.6 with PID 2056 (D:\yusf\projects\se\personal_budget_tracker\expense\target\classes started by Lil in D:\yusf\projects\se\personal_budget_tracker)
+2025-05-14T00:47:04.647+03:00  INFO 2056 --- [expense] [restartedMain] com.se.expense.ExpenseApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-05-14T00:47:04.785+03:00  INFO 2056 --- [expense] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-14T00:47:04.788+03:00  INFO 2056 --- [expense] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-14T00:47:08.031+03:00  INFO 2056 --- [expense] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-14T00:47:08.672+03:00  INFO 2056 --- [expense] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 577 ms. Found 2 JPA repository interfaces.
+2025-05-14T00:47:10.264+03:00  INFO 2056 --- [expense] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=da2fba5e-2f11-3e60-8c06-1ab4f5975928
+2025-05-14T00:47:14.325+03:00  INFO 2056 --- [expense] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8763 (http)
+2025-05-14T00:47:14.375+03:00  INFO 2056 --- [expense] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-14T00:47:14.379+03:00  INFO 2056 --- [expense] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-14T00:47:15.539+03:00  INFO 2056 --- [expense] [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-05-14T00:47:15.645+03:00  INFO 2056 --- [expense] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-14T00:47:15.671+03:00  INFO 2056 --- [expense] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 10880 ms
+2025-05-14T00:47:17.316+03:00  INFO 2056 --- [expense] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-14T00:47:17.663+03:00  INFO 2056 --- [expense] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-05-14T00:47:17.909+03:00  INFO 2056 --- [expense] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-14T00:47:19.593+03:00  INFO 2056 --- [expense] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-14T00:47:19.762+03:00  INFO 2056 --- [expense] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-14T00:47:20.346+03:00  INFO 2056 --- [expense] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1941edc3
+2025-05-14T00:47:20.358+03:00  INFO 2056 --- [expense] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-14T00:47:20.559+03:00  WARN 2056 --- [expense] [restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2025-05-14T00:47:20.735+03:00  INFO 2056 --- [expense] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 5.5.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-14T00:47:23.950+03:00  INFO 2056 --- [expense] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-14T00:47:24.185+03:00  INFO 2056 --- [expense] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-14T00:47:25.719+03:00  INFO 2056 --- [expense] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-14T00:47:29.652+03:00  WARN 2056 --- [expense] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-14T00:47:29.829+03:00  INFO 2056 --- [expense] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userService
+2025-05-14T00:47:31.961+03:00  WARN 2056 --- [expense] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-05-14T00:47:33.098+03:00  WARN 2056 --- [expense] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-05-14T00:47:33.688+03:00  INFO 2056 --- [expense] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-14T00:47:34.123+03:00  WARN 2056 --- [expense] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-14T00:47:34.230+03:00  INFO 2056 --- [expense] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-05-14T00:47:34.384+03:00  INFO 2056 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-05-14T00:47:34.394+03:00  INFO 2056 --- [expense] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-14T00:47:34.414+03:00  INFO 2056 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-05-14T00:47:34.415+03:00  INFO 2056 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-05-14T00:47:34.416+03:00  INFO 2056 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-05-14T00:47:34.418+03:00  INFO 2056 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-05-14T00:47:34.420+03:00  INFO 2056 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-05-14T00:47:34.423+03:00  INFO 2056 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-05-14T00:47:34.424+03:00  INFO 2056 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-05-14T00:47:35.889+03:00  INFO 2056 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-05-14T00:47:35.894+03:00  INFO 2056 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-05-14T00:47:35.943+03:00  INFO 2056 --- [expense] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-05-14T00:47:35.976+03:00  INFO 2056 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1747172855973 with initial instances count: 1
+2025-05-14T00:47:36.010+03:00  INFO 2056 --- [expense] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application EXPENSE with eureka with status UP
+2025-05-14T00:47:36.015+03:00  INFO 2056 --- [expense] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1747172856015, current=UP, previous=STARTING]
+2025-05-14T00:47:36.032+03:00  INFO 2056 --- [expense] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EXPENSE/DESKTOP-7K12F22:expense:8763: registering service...
+2025-05-14T00:47:36.280+03:00  INFO 2056 --- [expense] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8763 (http) with context path '/'
+2025-05-14T00:47:36.308+03:00  INFO 2056 --- [expense] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8763
+2025-05-14T00:47:36.401+03:00  INFO 2056 --- [expense] [restartedMain] com.se.expense.ExpenseApplication        : Started ExpenseApplication in 33.496 seconds (process running for 35.313)
+2025-05-14T00:47:36.487+03:00  INFO 2056 --- [expense] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EXPENSE/DESKTOP-7K12F22:expense:8763 - registration status: 204
+2025-05-14T00:49:48.684+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-14T00:49:48.685+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-14T00:49:48.687+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-05-14T00:50:19.894+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-2] com.se.expense.aspects.LoggingAspect     : Method getSummary() executed successfully in 180 ms.
+2025-05-14T00:50:25.350+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-5] com.se.expense.aspects.LoggingAspect     : Method getPie() executed successfully in 5 ms.
+2025-05-14T00:50:30.816+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-6] com.se.expense.aspects.LoggingAspect     : Method getAllExpenses() executed successfully in 43 ms.
+2025-05-14T00:50:36.217+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-1] com.se.expense.aspects.LoggingAspect     : Method addExpense() executed successfully in 14 ms.
+2025-05-14T00:50:41.494+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-10] com.se.expense.aspects.LoggingAspect     : Method updateExpense() executed successfully in 8 ms.
+2025-05-14T00:50:46.310+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-9] com.se.expense.aspects.LoggingAspect     : Method deleteExpense() executed successfully in 3 ms.
+2025-05-14T00:52:34.437+03:00  INFO 2056 --- [expense] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-14T00:56:20.901+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-2] com.se.expense.aspects.LoggingAspect     : Method getPie() executed successfully in 31 ms.
+2025-05-14T00:56:35.790+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-5] com.se.expense.aspects.LoggingAspect     : Method getAllExpenses() executed successfully in 47 ms.
+2025-05-14T00:56:38.070+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-6] com.se.expense.aspects.LoggingAspect     : Method getPie() executed successfully in 3 ms.
+2025-05-14T00:57:13.100+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-1] com.se.expense.aspects.LoggingAspect     : Method getAllExpenses() executed successfully in 8 ms.
+2025-05-14T00:57:15.402+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-10] com.se.expense.aspects.LoggingAspect     : Method getPie() executed successfully in 19 ms.
+2025-05-14T00:57:15.455+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-9] com.se.expense.aspects.LoggingAspect     : Method getSummary() executed successfully in 15 ms.
+2025-05-14T00:57:17.720+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-4] com.se.expense.aspects.LoggingAspect     : Method getAllExpenses() executed successfully in 16 ms.
+2025-05-14T00:57:34.460+03:00  INFO 2056 --- [expense] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-14T00:57:54.478+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-7] com.se.expense.aspects.LoggingAspect     : Method getAllExpenses() executed successfully in 0 ms.
+2025-05-14T00:58:18.757+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-3] com.se.expense.aspects.LoggingAspect     : Method getAllExpenses() executed successfully in 4 ms.
+2025-05-14T00:58:34.785+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-2] com.se.expense.aspects.LoggingAspect     : Method addExpense() executed successfully in 376 ms.
+2025-05-14T00:58:34.857+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-5] com.se.expense.aspects.LoggingAspect     : Method getAllExpenses() executed successfully in 25 ms.
+2025-05-14T00:59:11.680+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-6] com.se.expense.aspects.LoggingAspect     : Method addExpense() executed successfully in 40 ms.
+2025-05-14T00:59:11.814+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-1] com.se.expense.aspects.LoggingAspect     : Method getAllExpenses() executed successfully in 23 ms.
+2025-05-14T00:59:14.299+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-10] com.se.expense.aspects.LoggingAspect     : Method getPie() executed successfully in 14 ms.
+2025-05-14T00:59:14.345+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-9] com.se.expense.aspects.LoggingAspect     : Method getSummary() executed successfully in 46 ms.
+2025-05-14T00:59:18.859+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-4] com.se.expense.aspects.LoggingAspect     : Method getAllExpenses() executed successfully in 8 ms.
+2025-05-14T00:59:34.548+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-7] com.se.expense.aspects.LoggingAspect     : Method updateExpense() executed successfully in 19 ms.
+2025-05-14T00:59:34.617+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-8] com.se.expense.aspects.LoggingAspect     : Method getAllExpenses() executed successfully in 9 ms.
+2025-05-14T00:59:37.108+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-3] com.se.expense.aspects.LoggingAspect     : Method getPie() executed successfully in 15 ms.
+2025-05-14T00:59:37.124+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-2] com.se.expense.aspects.LoggingAspect     : Method getSummary() executed successfully in 55 ms.
+2025-05-14T00:59:43.513+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-5] com.se.expense.aspects.LoggingAspect     : Method getAllExpenses() executed successfully in 0 ms.
+2025-05-14T00:59:44.509+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-6] com.se.expense.aspects.LoggingAspect     : Method getPie() executed successfully in 3 ms.
+2025-05-14T01:00:00.597+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-1] com.se.expense.aspects.LoggingAspect     : Method getPie() executed successfully in 2 ms.
+2025-05-14T01:00:12.056+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-10] com.se.expense.aspects.LoggingAspect     : Method getAllExpenses() executed successfully in 8 ms.
+2025-05-14T01:01:31.489+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-7] com.se.expense.aspects.LoggingAspect     : Method getAllExpenses() executed successfully in 10 ms.
+2025-05-14T01:02:08.293+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-8] com.se.expense.aspects.LoggingAspect     : Method getAllExpenses() executed successfully in 62 ms.
+2025-05-14T01:02:34.471+03:00  INFO 2056 --- [expense] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-14T01:02:49.179+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-3] com.se.expense.aspects.LoggingAspect     : Method getAllExpenses() executed successfully in 13 ms.
+2025-05-14T01:03:14.169+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-2] com.se.expense.aspects.LoggingAspect     : Method getAllExpenses() executed successfully in 7 ms.
+2025-05-14T01:03:21.166+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-5] com.se.expense.aspects.LoggingAspect     : Method getAllExpenses() executed successfully in 10 ms.
+2025-05-14T01:04:18.189+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-6] com.se.expense.aspects.LoggingAspect     : Method getAllExpenses() executed successfully in 11 ms.
+2025-05-14T01:04:50.149+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-1] com.se.expense.aspects.LoggingAspect     : Method getAllExpenses() executed successfully in 7 ms.
+2025-05-14T01:05:24.168+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-10] com.se.expense.aspects.LoggingAspect     : Method getAllExpenses() executed successfully in 11 ms.
+2025-05-14T01:05:41.172+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-9] com.se.expense.aspects.LoggingAspect     : Method getAllExpenses() executed successfully in 17 ms.
+2025-05-14T01:05:59.176+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-4] com.se.expense.aspects.LoggingAspect     : Method getAllExpenses() executed successfully in 16 ms.
+2025-05-14T01:06:04.183+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-7] com.se.expense.aspects.LoggingAspect     : Method getAllExpenses() executed successfully in 8 ms.
+2025-05-14T01:07:27.178+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-3] com.se.expense.aspects.LoggingAspect     : Method getAllExpenses() executed successfully in 9 ms.
+2025-05-14T01:07:34.487+03:00  INFO 2056 --- [expense] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-14T01:07:43.364+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-2] com.se.expense.aspects.LoggingAspect     : Method getAllExpenses() executed successfully in 7 ms.
+2025-05-14T01:07:50.938+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-5] com.se.expense.aspects.LoggingAspect     : Method getAllExpenses() executed successfully in 8 ms.
+2025-05-14T01:08:08.156+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-6] com.se.expense.aspects.LoggingAspect     : Method getAllExpenses() executed successfully in 6 ms.
+2025-05-14T01:12:34.500+03:00  INFO 2056 --- [expense] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-14T01:17:15.857+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-3] com.se.expense.aspects.LoggingAspect     : Method getPie() executed successfully in 11 ms.
+2025-05-14T01:17:23.903+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-2] com.se.expense.aspects.LoggingAspect     : Method getAllExpenses() executed successfully in 0 ms.
+2025-05-14T01:17:25.536+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-6] com.se.expense.aspects.LoggingAspect     : Method getPie() executed successfully in 1 ms.
+2025-05-14T01:17:25.583+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-5] com.se.expense.aspects.LoggingAspect     : Method getSummary() executed successfully in 47 ms.
+2025-05-14T01:17:34.519+03:00  INFO 2056 --- [expense] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-14T01:17:52.690+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-1] com.se.expense.aspects.LoggingAspect     : Method getPie() executed successfully in 2 ms.
+2025-05-14T01:18:14.175+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-10] com.se.expense.aspects.LoggingAspect     : Method getPie() executed successfully in 5 ms.
+2025-05-14T01:18:29.432+03:00  INFO 2056 --- [expense] [http-nio-8763-exec-9] com.se.expense.aspects.LoggingAspect     : Method getPie() executed successfully in 2 ms.
+2025-05-14T01:22:34.534+03:00  INFO 2056 --- [expense] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-14T01:27:34.550+03:00  INFO 2056 --- [expense] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

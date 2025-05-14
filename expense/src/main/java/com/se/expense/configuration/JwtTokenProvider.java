@@ -1,29 +1,33 @@
 package com.se.expense.configuration;
 
-import io.jsonwebtoken.*;
-import io.jsonwebtoken.security.Keys;
+import java.security.Key;
+import java.util.Date;
+
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Component;
-import com.se.expense.model.UserModel;
+
 import com.se.expense.Service.UserService;
-import java.security.Key;
-import java.util.Date;
+import com.se.expense.model.UserModel;
+
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.security.Keys;
 
 @Component
 public class JwtTokenProvider {
 
     private final JwtConfig jwtConfig;
-    private final UserService userService;
+    private final UserService UserService;
 
-    public JwtTokenProvider(JwtConfig jwtConfig, UserService userService) {
+    public JwtTokenProvider(JwtConfig jwtConfig, UserService UserService) {
         this.jwtConfig = jwtConfig;
-        this.userService = userService;
+        this.UserService = UserService;
     }
 
     public String generateAccessToken(Authentication authentication) {
         User userPrincipal = (User) authentication.getPrincipal();
-        UserModel userModel = userService.loadUserModelByUsername(userPrincipal.getUsername());
+        UserModel userModel = UserService.loadUserModelByUsername(userPrincipal.getUsername());
 
         Date now = new Date();
         Date expiryDate = new Date(now.getTime() + jwtConfig.getAccessTokenExpiration());
@@ -43,7 +47,7 @@ public class JwtTokenProvider {
 
     public String generateRefreshToken(Authentication authentication) {
         User userPrincipal = (User) authentication.getPrincipal();
-        UserModel userModel = userService.loadUserModelByUsername(userPrincipal.getUsername());
+        UserModel userModel = UserService.loadUserModelByUsername(userPrincipal.getUsername());
 
         Date now = new Date();
         Date expiryDate = new Date(now.getTime() + jwtConfig.getRefreshTokenExpiration());

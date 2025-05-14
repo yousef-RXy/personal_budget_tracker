@@ -1,0 +1,207 @@
+2025-05-14T00:00:10.873+03:00  INFO 14484 --- [service_registry] [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTH/host.docker.internal:auth:8764 with status DOWN (replication=false)
+2025-05-14T00:00:11.289+03:00  INFO 14484 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-05-14T00:00:13.921+03:00  INFO 14484 --- [service_registry] [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance AUTH/host.docker.internal:auth:8764 (replication=false)
+2025-05-14T00:00:27.443+03:00  INFO 14484 --- [service_registry] [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance EXPENSE/host.docker.internal:expense:8763 with status UP (replication=false)
+2025-05-14T00:00:37.880+03:00  INFO 14484 --- [service_registry] [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance EXPENSE/host.docker.internal:expense:8763 with status DOWN (replication=false)
+2025-05-14T00:00:37.883+03:00  INFO 14484 --- [service_registry] [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance EXPENSE/host.docker.internal:expense:8763 (replication=false)
+2025-05-14T00:00:39.351+03:00  INFO 14484 --- [service_registry] [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance EXPENSE/host.docker.internal:expense:8763 with status UP (replication=false)
+2025-05-14T00:00:50.824+03:00  INFO 14484 --- [service_registry] [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance EXPENSE/host.docker.internal:expense:8763 with status DOWN (replication=false)
+2025-05-14T00:00:50.827+03:00  INFO 14484 --- [service_registry] [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance EXPENSE/host.docker.internal:expense:8763 (replication=false)
+2025-05-14T00:00:51.675+03:00  INFO 14484 --- [service_registry] [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance EXPENSE/host.docker.internal:expense:8763 with status UP (replication=false)
+2025-05-14T00:00:59.130+03:00  INFO 14484 --- [service_registry] [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance EXPENSE/host.docker.internal:expense:8763 with status DOWN (replication=false)
+2025-05-14T00:00:59.134+03:00  INFO 14484 --- [service_registry] [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance EXPENSE/host.docker.internal:expense:8763 (replication=false)
+2025-05-14T00:01:00.005+03:00  INFO 14484 --- [service_registry] [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance EXPENSE/host.docker.internal:expense:8763 with status UP (replication=false)
+2025-05-14T00:01:11.295+03:00  INFO 14484 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
+2025-05-14T00:01:58.734+03:00  INFO 14484 --- [service_registry] [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTH/host.docker.internal:auth:8764 with status UP (replication=false)
+2025-05-14T00:02:11.295+03:00  INFO 14484 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-05-14T00:02:23.783+03:00  INFO 14484 --- [service_registry] [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance EXPENSE/host.docker.internal:expense:8763 with status DOWN (replication=false)
+2025-05-14T00:02:23.788+03:00  INFO 14484 --- [service_registry] [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance EXPENSE/host.docker.internal:expense:8763 (replication=false)
+2025-05-14T00:02:24.629+03:00  INFO 14484 --- [service_registry] [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance EXPENSE/host.docker.internal:expense:8763 with status UP (replication=false)
+2025-05-14T00:02:53.921+03:00  INFO 14484 --- [service_registry] [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTH/host.docker.internal:auth:8764 with status DOWN (replication=false)
+2025-05-14T00:02:53.926+03:00  INFO 14484 --- [service_registry] [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance AUTH/host.docker.internal:auth:8764 (replication=false)
+2025-05-14T00:03:03.114+03:00  INFO 14484 --- [service_registry] [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTH/host.docker.internal:auth:8764 with status UP (replication=false)
+2025-05-14T00:03:05.399+03:00  INFO 14484 --- [service_registry] [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTH/host.docker.internal:auth:8764 with status DOWN (replication=false)
+2025-05-14T00:03:08.429+03:00  INFO 14484 --- [service_registry] [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance AUTH/host.docker.internal:auth:8764 (replication=false)
+2025-05-14T00:03:09.287+03:00  INFO 14484 --- [service_registry] [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTH/host.docker.internal:auth:8764 with status UP (replication=false)
+2025-05-14T00:03:11.296+03:00  INFO 14484 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-05-14T00:04:11.296+03:00  INFO 14484 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-05-14T00:05:11.301+03:00  INFO 14484 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
+2025-05-14T00:06:11.169+03:00  WARN 14484 --- [service_registry] [Eureka-PeerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2025-05-14T00:06:11.308+03:00  INFO 14484 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 6ms
+2025-05-14T00:07:11.320+03:00  INFO 14484 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 12ms
+2025-05-14T00:07:20.514+03:00  INFO 14484 --- [service_registry] [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance EXPENSE/host.docker.internal:expense:8763 with status DOWN (replication=false)
+2025-05-14T00:07:20.519+03:00  INFO 14484 --- [service_registry] [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance EXPENSE/host.docker.internal:expense:8763 (replication=false)
+2025-05-14T00:07:21.477+03:00  INFO 14484 --- [service_registry] [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance EXPENSE/host.docker.internal:expense:8763 with status UP (replication=false)
+2025-05-14T00:08:11.334+03:00  INFO 14484 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 13ms
+2025-05-14T00:09:11.338+03:00  INFO 14484 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
+2025-05-14T00:44:10.593+03:00  INFO 9968 --- [service_registry] [main] c.s.s.ServiceRegistryApplication         : Starting ServiceRegistryApplication using Java 21.0.6 with PID 9968 (D:\yusf\projects\se\personal_budget_tracker\service_registry\target\classes started by Lil in D:\yusf\projects\se\personal_budget_tracker)
+2025-05-14T00:44:10.600+03:00  INFO 9968 --- [service_registry] [main] c.s.s.ServiceRegistryApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-05-14T00:44:13.069+03:00  INFO 9968 --- [service_registry] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=78b2266d-ec4f-3fee-a7ff-a0c450685528
+2025-05-14T00:44:14.338+03:00  INFO 9968 --- [service_registry] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8761 (http)
+2025-05-14T00:44:14.375+03:00  INFO 9968 --- [service_registry] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-14T00:44:14.376+03:00  INFO 9968 --- [service_registry] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-14T00:44:14.559+03:00  INFO 9968 --- [service_registry] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-14T00:44:14.560+03:00  INFO 9968 --- [service_registry] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3833 ms
+2025-05-14T00:44:16.897+03:00  INFO 9968 --- [service_registry] [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2025-05-14T00:44:16.899+03:00  INFO 9968 --- [service_registry] [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2025-05-14T00:44:17.466+03:00  INFO 9968 --- [service_registry] [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2025-05-14T00:44:17.467+03:00  INFO 9968 --- [service_registry] [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2025-05-14T00:44:17.910+03:00  INFO 9968 --- [service_registry] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-05-14T00:44:19.923+03:00  WARN 9968 --- [service_registry] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-14T00:44:19.998+03:00  INFO 9968 --- [service_registry] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-05-14T00:44:20.059+03:00  INFO 9968 --- [service_registry] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-05-14T00:44:20.060+03:00  INFO 9968 --- [service_registry] [main] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2025-05-14T00:44:20.066+03:00  INFO 9968 --- [service_registry] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1747172660064 with initial instances count: 0
+2025-05-14T00:44:20.208+03:00  INFO 9968 --- [service_registry] [main] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
+2025-05-14T00:44:20.213+03:00  WARN 9968 --- [service_registry] [main] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2025-05-14T00:44:20.262+03:00  INFO 9968 --- [service_registry] [main] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
+2025-05-14T00:44:20.270+03:00  INFO 9968 --- [service_registry] [main] c.n.eureka.DefaultEurekaServerContext    : Initialized
+2025-05-14T00:44:20.401+03:00  INFO 9968 --- [service_registry] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-05-14T00:44:20.545+03:00  INFO 9968 --- [service_registry] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SERVICE_REGISTRY with eureka with status UP
+2025-05-14T00:44:20.572+03:00  INFO 9968 --- [service_registry] [Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
+2025-05-14T00:44:20.578+03:00  INFO 9968 --- [service_registry] [Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
+2025-05-14T00:44:20.579+03:00  INFO 9968 --- [service_registry] [Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
+2025-05-14T00:44:20.582+03:00  INFO 9968 --- [service_registry] [Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
+2025-05-14T00:44:20.583+03:00  INFO 9968 --- [service_registry] [Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
+2025-05-14T00:44:20.588+03:00  INFO 9968 --- [service_registry] [Thread-9] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
+2025-05-14T00:44:20.603+03:00  INFO 9968 --- [service_registry] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8761 (http) with context path '/'
+2025-05-14T00:44:20.606+03:00  INFO 9968 --- [service_registry] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8761
+2025-05-14T00:44:20.679+03:00  INFO 9968 --- [service_registry] [main] c.s.s.ServiceRegistryApplication         : Started ServiceRegistryApplication in 11.414 seconds (process running for 12.776)
+2025-05-14T00:44:36.767+03:00  INFO 9968 --- [service_registry] [http-nio-8761-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-14T00:44:36.768+03:00  INFO 9968 --- [service_registry] [http-nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-14T00:44:36.776+03:00  INFO 9968 --- [service_registry] [http-nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-05-14T00:45:20.586+03:00  INFO 9968 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-05-14T00:45:22.275+03:00  INFO 9968 --- [service_registry] [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/DESKTOP-7K12F22:api-gateway:8765 with status UP (replication=false)
+2025-05-14T00:46:20.586+03:00  INFO 9968 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-05-14T00:47:20.586+03:00  INFO 9968 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-05-14T00:47:31.649+03:00  INFO 9968 --- [service_registry] [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTH/DESKTOP-7K12F22:auth:8764 with status UP (replication=false)
+2025-05-14T00:47:36.451+03:00  INFO 9968 --- [service_registry] [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance EXPENSE/DESKTOP-7K12F22:expense:8763 with status UP (replication=false)
+2025-05-14T00:47:37.990+03:00  INFO 9968 --- [service_registry] [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance INCOME/DESKTOP-7K12F22:income:8762 with status UP (replication=false)
+2025-05-14T00:48:20.587+03:00  INFO 9968 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-05-14T00:49:20.587+03:00  INFO 9968 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-05-14T00:50:20.588+03:00  INFO 9968 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-05-14T00:51:20.588+03:00  INFO 9968 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-05-14T00:52:20.588+03:00  INFO 9968 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-05-14T00:53:20.588+03:00  INFO 9968 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-05-14T00:54:20.234+03:00  WARN 9968 --- [service_registry] [Eureka-PeerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2025-05-14T00:54:20.589+03:00  INFO 9968 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2025-05-14T00:55:20.589+03:00  INFO 9968 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-05-14T00:56:20.604+03:00  INFO 9968 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 15ms
+2025-05-14T00:57:20.605+03:00  INFO 9968 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-05-14T00:58:20.619+03:00  INFO 9968 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 14ms
+2025-05-14T00:59:20.285+03:00  INFO 9968 --- [service_registry] [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 8
+2025-05-14T00:59:20.624+03:00  INFO 9968 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
+2025-05-14T01:00:20.639+03:00  INFO 9968 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 15ms
+2025-05-14T01:01:20.643+03:00  INFO 9968 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+2025-05-14T01:02:20.654+03:00  INFO 9968 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 12ms
+2025-05-14T01:03:20.660+03:00  INFO 9968 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
+2025-05-14T01:04:20.244+03:00  WARN 9968 --- [service_registry] [Eureka-PeerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2025-05-14T01:04:20.660+03:00  INFO 9968 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-05-14T01:05:20.660+03:00  INFO 9968 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-05-14T01:06:20.665+03:00  INFO 9968 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
+2025-05-14T01:07:20.671+03:00  INFO 9968 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
+2025-05-14T01:08:20.686+03:00  INFO 9968 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 15ms
+2025-05-14T01:09:20.695+03:00  INFO 9968 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9ms
+2025-05-14T01:10:20.702+03:00  INFO 9968 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 6ms
+2025-05-14T01:11:20.707+03:00  INFO 9968 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
+2025-05-14T01:12:20.716+03:00  INFO 9968 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
+2025-05-14T01:13:20.717+03:00  INFO 9968 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-05-14T01:14:20.254+03:00  WARN 9968 --- [service_registry] [Eureka-PeerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2025-05-14T01:14:20.271+03:00  INFO 9968 --- [service_registry] [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 8
+2025-05-14T01:14:20.729+03:00  INFO 9968 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 12ms
+2025-05-14T01:15:20.741+03:00  INFO 9968 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 11ms
+2025-05-14T01:16:20.746+03:00  INFO 9968 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
+2025-05-14T01:17:20.748+03:00  INFO 9968 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2025-05-14T01:18:20.748+03:00  INFO 9968 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-05-14T01:19:20.756+03:00  INFO 9968 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 7ms
+2025-05-14T01:20:05.909+03:00  INFO 9968 --- [service_registry] [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTH/DESKTOP-7K12F22:auth:8764 with status DOWN (replication=false)
+2025-05-14T01:20:09.282+03:00  INFO 9968 --- [service_registry] [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance AUTH/DESKTOP-7K12F22:auth:8764 (replication=false)
+2025-05-14T01:20:20.757+03:00  INFO 9968 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-05-14T01:21:10.448+03:00  INFO 9968 --- [service_registry] [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTH/DESKTOP-7K12F22:auth:8764 with status UP (replication=false)
+2025-05-14T01:21:20.757+03:00  INFO 9968 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-05-14T01:21:48.301+03:00  INFO 9968 --- [service_registry] [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTH/DESKTOP-7K12F22:auth:8764 with status DOWN (replication=false)
+2025-05-14T01:21:51.407+03:00  INFO 9968 --- [service_registry] [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance AUTH/DESKTOP-7K12F22:auth:8764 (replication=false)
+2025-05-14T01:21:53.375+03:00  INFO 9968 --- [service_registry] [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTH/DESKTOP-7K12F22:auth:8764 with status UP (replication=false)
+2025-05-14T01:22:20.757+03:00  INFO 9968 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-05-14T01:22:59.899+03:00  INFO 9968 --- [service_registry] [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTH/DESKTOP-7K12F22:auth:8764 with status DOWN (replication=false)
+2025-05-14T01:23:02.939+03:00  INFO 9968 --- [service_registry] [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance AUTH/DESKTOP-7K12F22:auth:8764 (replication=false)
+2025-05-14T01:23:05.186+03:00  INFO 9968 --- [service_registry] [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTH/DESKTOP-7K12F22:auth:8764 with status UP (replication=false)
+2025-05-14T01:23:20.757+03:00  INFO 9968 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-05-14T01:24:15.613+03:00  INFO 9968 --- [service_registry] [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTH/DESKTOP-7K12F22:auth:8764 with status DOWN (replication=false)
+2025-05-14T01:24:18.691+03:00  INFO 9968 --- [service_registry] [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance AUTH/DESKTOP-7K12F22:auth:8764 (replication=false)
+2025-05-14T01:24:20.350+03:00  WARN 9968 --- [service_registry] [Eureka-PeerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2025-05-14T01:24:20.757+03:00  INFO 9968 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-05-14T01:24:34.712+03:00  INFO 9968 --- [service_registry] [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTH/DESKTOP-7K12F22:auth:8764 with status UP (replication=false)
+2025-05-14T01:25:16.818+03:00  INFO 9968 --- [service_registry] [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTH/DESKTOP-7K12F22:auth:8764 with status DOWN (replication=false)
+2025-05-14T01:25:19.875+03:00  INFO 9968 --- [service_registry] [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance AUTH/DESKTOP-7K12F22:auth:8764 (replication=false)
+2025-05-14T01:25:20.758+03:00  INFO 9968 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-05-14T01:25:22.672+03:00  INFO 9968 --- [service_registry] [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTH/DESKTOP-7K12F22:auth:8764 with status UP (replication=false)
+2025-05-14T01:25:41.326+03:00  INFO 9968 --- [service_registry] [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTH/DESKTOP-7K12F22:auth:8764 with status DOWN (replication=false)
+2025-05-14T01:25:44.524+03:00  INFO 9968 --- [service_registry] [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance AUTH/DESKTOP-7K12F22:auth:8764 (replication=false)
+2025-05-14T01:25:47.470+03:00  INFO 9968 --- [service_registry] [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTH/DESKTOP-7K12F22:auth:8764 with status UP (replication=false)
+2025-05-14T01:26:20.758+03:00  INFO 9968 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-05-14T01:26:39.178+03:00  INFO 9968 --- [service_registry] [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTH/DESKTOP-7K12F22:auth:8764 with status DOWN (replication=false)
+2025-05-14T01:26:42.275+03:00  INFO 9968 --- [service_registry] [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance AUTH/DESKTOP-7K12F22:auth:8764 (replication=false)
+2025-05-14T01:26:45.408+03:00  INFO 9968 --- [service_registry] [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTH/DESKTOP-7K12F22:auth:8764 with status UP (replication=false)
+2025-05-14T01:26:54.760+03:00  INFO 9968 --- [service_registry] [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTH/DESKTOP-7K12F22:auth:8764 with status DOWN (replication=false)
+2025-05-14T01:26:57.804+03:00  INFO 9968 --- [service_registry] [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance AUTH/DESKTOP-7K12F22:auth:8764 (replication=false)
+2025-05-14T01:26:59.267+03:00  INFO 9968 --- [service_registry] [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTH/DESKTOP-7K12F22:auth:8764 with status UP (replication=false)
+2025-05-14T01:27:00.564+03:00  INFO 9968 --- [service_registry] [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTH/DESKTOP-7K12F22:auth:8764 with status DOWN (replication=false)
+2025-05-14T01:27:03.599+03:00  INFO 9968 --- [service_registry] [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance AUTH/DESKTOP-7K12F22:auth:8764 (replication=false)
+2025-05-14T01:27:05.014+03:00  INFO 9968 --- [service_registry] [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTH/DESKTOP-7K12F22:auth:8764 with status UP (replication=false)
+2025-05-14T01:27:20.826+03:00  INFO 9968 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 68ms
+2025-05-14T01:28:20.827+03:00  INFO 9968 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-05-14T01:29:20.634+03:00  INFO 9968 --- [service_registry] [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 8
+2025-05-14T01:29:20.896+03:00  INFO 9968 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 69ms
+2025-05-14T01:45:04.288+03:00  INFO 9612 --- [service_registry] [main] c.s.s.ServiceRegistryApplication         : Starting ServiceRegistryApplication using Java 21.0.6 with PID 9612 (D:\yusf\projects\se\personal_budget_tracker\service_registry\target\classes started by Lil in D:\yusf\projects\se\personal_budget_tracker)
+2025-05-14T01:45:04.294+03:00  INFO 9612 --- [service_registry] [main] c.s.s.ServiceRegistryApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-05-14T01:45:06.058+03:00  INFO 9612 --- [service_registry] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=78b2266d-ec4f-3fee-a7ff-a0c450685528
+2025-05-14T01:45:06.946+03:00  INFO 9612 --- [service_registry] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8761 (http)
+2025-05-14T01:45:06.974+03:00  INFO 9612 --- [service_registry] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-14T01:45:06.975+03:00  INFO 9612 --- [service_registry] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-14T01:45:07.081+03:00  INFO 9612 --- [service_registry] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-14T01:45:07.083+03:00  INFO 9612 --- [service_registry] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2686 ms
+2025-05-14T01:45:08.629+03:00  INFO 9612 --- [service_registry] [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2025-05-14T01:45:08.633+03:00  INFO 9612 --- [service_registry] [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2025-05-14T01:45:08.865+03:00  INFO 9612 --- [service_registry] [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2025-05-14T01:45:08.866+03:00  INFO 9612 --- [service_registry] [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2025-05-14T01:45:09.195+03:00  INFO 9612 --- [service_registry] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-05-14T01:45:10.520+03:00  WARN 9612 --- [service_registry] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-14T01:45:10.558+03:00  INFO 9612 --- [service_registry] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-05-14T01:45:10.600+03:00  INFO 9612 --- [service_registry] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-05-14T01:45:10.601+03:00  INFO 9612 --- [service_registry] [main] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2025-05-14T01:45:10.605+03:00  INFO 9612 --- [service_registry] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1747176310603 with initial instances count: 0
+2025-05-14T01:45:10.683+03:00  INFO 9612 --- [service_registry] [main] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
+2025-05-14T01:45:10.686+03:00  WARN 9612 --- [service_registry] [main] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2025-05-14T01:45:10.709+03:00  INFO 9612 --- [service_registry] [main] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
+2025-05-14T01:45:10.710+03:00  INFO 9612 --- [service_registry] [main] c.n.eureka.DefaultEurekaServerContext    : Initialized
+2025-05-14T01:45:10.751+03:00  INFO 9612 --- [service_registry] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-05-14T01:45:10.851+03:00  INFO 9612 --- [service_registry] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SERVICE_REGISTRY with eureka with status UP
+2025-05-14T01:45:10.885+03:00  INFO 9612 --- [service_registry] [Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
+2025-05-14T01:45:10.888+03:00  INFO 9612 --- [service_registry] [Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
+2025-05-14T01:45:10.889+03:00  INFO 9612 --- [service_registry] [Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
+2025-05-14T01:45:10.890+03:00  INFO 9612 --- [service_registry] [Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
+2025-05-14T01:45:10.890+03:00  INFO 9612 --- [service_registry] [Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
+2025-05-14T01:45:10.893+03:00  INFO 9612 --- [service_registry] [Thread-9] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
+2025-05-14T01:45:10.910+03:00  INFO 9612 --- [service_registry] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8761 (http) with context path '/'
+2025-05-14T01:45:10.912+03:00  INFO 9612 --- [service_registry] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8761
+2025-05-14T01:45:10.952+03:00  INFO 9612 --- [service_registry] [main] c.s.s.ServiceRegistryApplication         : Started ServiceRegistryApplication in 7.526 seconds (process running for 9.007)
+2025-05-14T01:45:21.637+03:00  INFO 9612 --- [service_registry] [http-nio-8761-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-14T01:45:21.638+03:00  INFO 9612 --- [service_registry] [http-nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-14T01:45:21.640+03:00  INFO 9612 --- [service_registry] [http-nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-05-14T01:45:22.072+03:00  INFO 9612 --- [service_registry] [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/DESKTOP-7K12F22:api-gateway:8765 with status UP (replication=false)
+2025-05-14T01:46:10.891+03:00  INFO 9612 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-05-14T01:47:10.899+03:00  INFO 9612 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 7ms
+2025-05-14T01:48:10.911+03:00  INFO 9612 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 12ms
+2025-05-14T01:49:10.925+03:00  INFO 9612 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 13ms
+2025-05-14T01:50:10.933+03:00  INFO 9612 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
+2025-05-14T01:51:10.934+03:00  INFO 9612 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-05-14T01:52:10.934+03:00  INFO 9612 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-05-14T01:53:10.934+03:00  INFO 9612 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-05-14T01:54:10.942+03:00  INFO 9612 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 7ms
+2025-05-14T01:55:10.696+03:00  WARN 9612 --- [service_registry] [Eureka-PeerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2025-05-14T01:55:10.942+03:00  INFO 9612 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-05-14T01:56:10.942+03:00  INFO 9612 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-05-14T01:57:10.942+03:00  INFO 9612 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-05-14T01:58:10.942+03:00  INFO 9612 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-05-14T01:59:10.949+03:00  INFO 9612 --- [service_registry] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 7ms

@@ -1,83 +1,107 @@
 package com.se.auth.Service;
 
+import java.util.Optional;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Service;
 
 import com.se.auth.Repository.UserRepository;
+import com.se.auth.configuration.JwtTokenProvider;
+import com.se.auth.dto.AuthResponse;
+import com.se.auth.dto.LoginRequest;
+import com.se.auth.dto.RegisterRequest;
 import com.se.auth.model.UserModel;
-import java.util.ArrayList;
 
 @Service
-public class UserService implements UserDetailsService {
+public class UserService {
 
-    private final UserRepository userRepository;
-    private final PasswordEncoder passwordEncoder;
+  private final UserRepository userRepository;
+  private final PasswordEncoder passwordEncoder;
 
-    private static final Logger logger = LoggerFactory.getLogger(UserService.class);
+  private static final Logger logger = LoggerFactory.getLogger(UserService.class);
 
-    public UserService(UserRepository userRepository, PasswordEncoder passwordEncoder) {
-        this.userRepository = userRepository;
-        this.passwordEncoder = passwordEncoder;
+  private final AuthenticationManager authenticationManager;
+  private final JwtTokenProvider tokenProvider;
+  private final UserDetailService userDetailService;
+
+  public UserService(UserRepository userRepository, PasswordEncoder passwordEncoder,
+      AuthenticationManager authenticationManager,
+      JwtTokenProvider tokenProvider, UserDetailService userDetailService) {
+    this.userRepository = userRepository;
+    this.passwordEncoder = passwordEncoder;
+    this.authenticationManager = authenticationManager;
+    this.tokenProvider = tokenProvider;
+    this.userDetailService = userDetailService;
+  }
+
+  public UserModel registerUser(UserModel user) {
+    try {
+      String encodedPassword = passwordEncoder.encode(user.getPassword());
+      user.setPasswordHash(encodedPassword);
+      return userRepository.save(user);
+    } catch (Exception e) {
+      logger.error("Error during user registration", e);
+      throw new RuntimeException("Error during registration", e);
+    }
+  }
+
+  public AuthResponse login(LoginRequest request) {
+    Authentication authentication = authenticationManager.authenticate(
+        new UsernamePasswordAuthenticationToken(
+            request.getUsername(), request.getPassword()));
+
+    String accessToken = tokenProvider.generateAccessToken(authentication);
+    String refreshToken = tokenProvider.generateRefreshToken(authentication);
+    long expiresIn = tokenProvider.getAccessTokenExpirationInSeconds();
+
+    return new AuthResponse(accessToken, refreshToken, expiresIn);
+  }
+
+  public String register(RegisterRequest registerRequest) {
+    if (userDetailService.existsByUsername(registerRequest.getUsername())) {
+      throw new RuntimeException("Username is already taken!");
     }
 
-    @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        UserModel user = userRepository.findByUsername(username)
-                .orElseThrow(() -> new UsernameNotFoundException("User not found with username: " + username));
-        return new org.springframework.security.core.userdetails.User(
-                user.getUsername(),
-                user.getPasswordHash(),
-                new ArrayList<>());
+    if (userDetailService.existsByEmail(registerRequest.getEmail())) {
+      throw new RuntimeException("Email is already in use!");
     }
 
-    public UserModel loadUserModelByUsername(String username) throws UsernameNotFoundException {
-        return userRepository.findByUsername(username)
-                .orElseThrow(() -> new UsernameNotFoundException("User not found with username: " + username));
+    if (registerRequest.getPassword().length() < 8) {
+      throw new RuntimeException("Password must be at least 8 characters long");
     }
 
-    public UserDetails loadUserById(Long id) {
-        UserModel user = userRepository.findById(id)
-                .orElseThrow(() -> new UsernameNotFoundException("User not found with id: " + id));
-        return org.springframework.security.core.userdetails.User.builder()
-                .username(user.getUsername())
-                .password(user.getPasswordHash())
-                .build();
+    UserModel user = new UserModel();
+    user.setUsername(registerRequest.getUsername());
+    user.setEmail(registerRequest.getEmail());
+    user.setPassword(registerRequest.getPassword());
+    registerUser(user);
+
+    return "User registered successfully";
+  }
+
+  public AuthResponse refreshToken(String refreshToken) {
+    if (!tokenProvider.validateToken(refreshToken)) {
+      throw new RuntimeException("Invalid refresh token");
     }
 
-    public boolean existsByUsername(String username) {
-        return userRepository.findByUsername(username).isPresent();
-    }
+    Long userId = tokenProvider.getUserIdFromToken(refreshToken);
+    UserDetails userDetails = userDetailService.loadUserById(userId);
 
-    public boolean existsByEmail(String email) {
-        return userRepository.findByEmail(email).isPresent();
-    }
+    UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(userDetails, null,
+        userDetails.getAuthorities());
 
-    public UserModel registerUser(UserModel user) {
-        try {
-            if (existsByEmail(user.getEmail())) {
-                throw new RuntimeException("Email already exists");
-            }
+    String newAccessToken = tokenProvider.generateAccessToken(authentication);
+    return new AuthResponse(newAccessToken, refreshToken);
+  }
 
-            if (existsByUsername(user.getUsername())) {
-                throw new RuntimeException("Username already exists");
-            }
+  public Optional<Double> getBalance(Long userId) {
+    return userRepository.findBalanceByUserId(userId);
+  }
 
-            if (user.getPassword().length() < 8) {
-                throw new RuntimeException("Password must be at least 8 characters long");
-            }
-
-            String encodedPassword = passwordEncoder.encode(user.getPassword());
-            user.setPasswordHash(encodedPassword);
-
-            return userRepository.save(user);
-        } catch (Exception e) {
-            logger.error("Error during user registration", e);
-            throw new RuntimeException("Error during registration", e);
-        }
-    }
 }

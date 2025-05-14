@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.se.income.Service.IncomeService;
 import com.se.income.Service.IncomeSummaryService;
+import com.se.income.aspects.LogExecutionTime;
 import com.se.income.dto.CategoryTotalDTO;
 import com.se.income.dto.EntryDTO;
 import com.se.income.dto.SummaryDTO;
@@ -29,37 +30,44 @@ public class IncomeController {
   }
 
   @GetMapping
+  @LogExecutionTime
   public List<IncomeModel> getAllIncome(@RequestHeader("User-Id") Long userId) {
     return incomeService.getAllIncome(userId);
   }
 
   @GetMapping("/category")
+  @LogExecutionTime
   public List<IncomeModel> getCategoryIncome(@RequestHeader("Category") String category,
       @RequestHeader("User-Id") Long userId) {
     return incomeService.getCategoryIncome(userId, category);
   }
 
   @GetMapping("/summary")
+  @LogExecutionTime
   public SummaryDTO getSummary(@RequestHeader("User-Id") Long userId) {
     return summaryService.getSummary(userId);
   }
 
   @GetMapping("/pie")
+  @LogExecutionTime
   public List<CategoryTotalDTO> getPie(@RequestHeader("User-Id") Long userId) {
     return summaryService.getPie(userId);
   }
 
   @PostMapping
+  @LogExecutionTime
   public boolean addIncome(@RequestBody EntryDTO incomeDTO) {
     return incomeService.addIncome(incomeDTO);
   }
 
   @PutMapping("/{incomeID}")
+  @LogExecutionTime
   public boolean updateIncome(@PathVariable Long incomeID, @RequestBody EntryDTO updatedIncome) {
     return incomeService.UpdateIncome(updatedIncome, incomeID);
   }
 
   @DeleteMapping("/{incomeID}")
+  @LogExecutionTime
   public boolean deleteIncome(@PathVariable Long incomeID, @RequestHeader("User-Id") Long userId) {
     return incomeService.DeleteIncome(incomeID, userId);
   }

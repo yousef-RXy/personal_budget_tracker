@@ -18,3 +18,15 @@ jwt:
   secret: Jf94nA8snf94nA8snf94nA8snf94nA8s
   access-token-expiration: 3600000
   refresh-token-expiration: 2592000000
+
+logging:
+  level:
+    com:
+      example: INFO
+  file:
+    name: logs/expense.log
+    path: logs
+  logback:
+    rollingpolicy:
+      max-file-size: 10MB
+      max-history: 10

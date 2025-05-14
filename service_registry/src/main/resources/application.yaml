@@ -11,3 +11,15 @@ eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
+
+logging:
+  level:
+    com:
+      example: INFO
+  file:
+    name: logs/registry.log
+    path: logs
+  logback:
+    rollingpolicy:
+      max-file-size: 10MB
+      max-history: 10
